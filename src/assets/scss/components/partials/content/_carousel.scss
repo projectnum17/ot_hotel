@@ -1,0 +1,36 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.carousel {
+    padding-block: rem(40px);
+    overflow: hidden;
+    @include media('mobile') {
+        padding-block: rem(28px);
+    }
+
+    &__head {
+        margin-bottom: rem(80px);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: rem(24px);
+        @include media('tablet') {
+            margin-bottom: rem(56px);
+        }
+        @include media('mobile') {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: rem(12px);
+            margin-bottom: rem(24px);
+        }
+    }
+
+    .section-descr {
+        max-width: rem(564px);
+    }
+
+    .section-heading {
+        max-width: 50%;
+    }
+}

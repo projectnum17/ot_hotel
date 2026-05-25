@@ -1,0 +1,25 @@
+@use '../../base/var' as *;
+@use '../../base/mixins' as *;
+@use '../../base/media' as *;
+
+body {
+    &:has(section.pt-sm) {
+        .main {
+            padding-top: calc(var(--header-h) + #{rem(40px)});
+            @include media('mobile') {
+                padding-top: calc(var(--header-h) + #{rem(24px)});
+            }
+        }
+    }
+    &:has(section.pt-lg) {
+        .main {
+            padding-top: calc(var(--header-h) + #{rem(78px)});
+            @include media('desktop') {
+                padding-top: calc(var(--header-h) + #{rem(56px)});
+            }
+            @include media('mobile') {
+                padding-top: calc(var(--header-h) + #{rem(24px)});
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+<section class="benefits">
+    <div class="container">
+        <div class="benefits__titles">
+            <div class="benefits__items">
+                <div class="benefits__items-inner">
+                    {{#each benefits.benefits.headings}}
+                    {{> _titleBuilder
+                    tagWrapper = 'h2'
+                    label = title
+                    className = 'section-heading'
+                    }}
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+        <div class="benefits__previews">
+            {{#each benefits.benefits.description}}
+            <a href="javascript: void(0)" class="benefits__preview">
+                <div class="benefits__pic">
+                    <img loading="lazy" decoding="async" src="{{ picture }}" alt="Picture">
+                </div>
+                <div class="benefits__info">
+                    <div class="link-route">
+                        Детальніше
+                        <svg>
+                        <use xlink:href="./assets/images/icons/svg/sprite.svg#arrow-r"></use>
+                    </svg>
+                    </div>
+                    {{> _sectionDescription
+                        text = description
+                    }}
+                </div>
+            </a>
+            {{/each}}
+        </div>
+    </div>
+</section>

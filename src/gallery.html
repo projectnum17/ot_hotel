@@ -1,0 +1,23 @@
+---
+layout: default
+pageName: Gallery
+pageDescription: Gallery
+headerCLass: header--simple
+---
+
+{{> _info
+    title = 'Галерея'
+    description = 'Кадри атмосфери, яку хочеться відчути'
+    galleryProp = 1
+    thumbnails=(
+        array
+            (hash picture='./assets/images/c_5.jpg')
+            (hash picture='./assets/images/c_6.jpg')
+            (hash picture='./assets/images/c_7.jpg')
+            (hash picture='./assets/images/c_7.jpg')
+    )
+}}
+{{> _reviews}}
+{{> _faq picture = './assets/images/faq.jpg'}}
+{{> _details}}
+{{> _preview}}

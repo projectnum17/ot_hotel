@@ -1,0 +1,53 @@
+{
+    "benefits": {
+        "headings": [
+            { "title": "SPA простір" },
+            { "title": "Курорт «Миргород»" },
+            { "title": "Каное" },
+            { "title": "Кінотеатр" },
+            { "title": "Екскурсії" },
+            { "title": "Вело" },
+            { "title": "Майданчік" },
+            { "title": "Теніс " },
+            { "title": "Для малечі" }
+        ],
+        "description": [
+            {
+                "picture": "./assets/images/ben_1.jpg",
+                "description": "Тиша, тепло і відновлення для тіла і думок"
+            },
+            {
+                "picture": "./assets/images/ben_2.png",
+                "description": "Мінеральні води та атмосфера відновлення."
+            },
+            {
+                "picture": "./assets/images/ben_3.jpg",
+                "description": "Спокійні прогулянки водою серед природи та тиші."
+            },
+            {
+                "picture": "./assets/images/ben_4.png",
+                "description": "Затишний простір для вечірнього перегляду фільмів."
+            },
+            {
+                "picture": "./assets/images/ben_5.png",
+                "description": "Знайомство з Миргородом, локальною культурою та природою."
+            },
+            {
+                "picture": "./assets/images/ben_6.png",
+                "description": "Прогулянки територією та навколишньою природою на велосипеді."
+            },
+            {
+                "picture": "./assets/images/ben_7.jpg",
+                "description": "Відкритий простір для відпочинку та активностей на свіжому повітрі."
+            },
+            {
+                "picture": "./assets/images/ben_8.png",
+                "description": "Активний відпочинок у спокійній атмосфері курорту."
+            },
+            {
+                "picture": "./assets/images/ben_9.jpg",
+                "description": "Дитяча зона для ігор, відпочинку та сімейного дозвілля."
+            }
+        ]
+    }
+}

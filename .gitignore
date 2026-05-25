@@ -1,0 +1,36 @@
+# npm
+node_modules/
+
+# prod directory
+dist/
+
+# npm logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# system macOS files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# system Windows files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+# IDE setting (VS Code, WebStorm и т.д.)
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Temporary files and backups
+*.swp
+*.bak
+*.tmp
+*.temp
+
+# Confidential information (if any)
+.env

@@ -1,0 +1,19 @@
+<section class="apartments">
+    <div class="container">
+        <div class="apartments__head">
+            {{> _titleBuilder
+                tagWrapper = 'h2'
+                label = 'Доступні апартаменти'
+                className = 'section-heading'
+            }}
+            {{> _linkRoute
+                label = 'переглянути всі'
+            }}
+        </div>
+        <div class="apartments__collect">
+            {{#each apartments.apartments}}
+                {{> _apartmentBox this}}
+            {{/each}}
+        </div>
+    </div>
+</section>

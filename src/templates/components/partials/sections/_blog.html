@@ -1,0 +1,20 @@
+<section class="blog">
+    <div class="container">
+        <div class="blog__head">
+            {{> _titleBuilder
+                tagWrapper = 'h2'
+                className = 'section-info'
+                label = 'Блог'
+            }}
+            {{> _sectionDescription
+                text = 'Про відпочинок, тишу і речі, які повертають до себе'
+            }}
+            {{> _filterPanel}}
+        </div>
+        {{> _sliderNav
+            prevBtn = 'js-blog-prev'
+            nextBtn = 'js-blog-next'
+        }}
+        {{> _blogSlider}}
+    </div>
+</section>

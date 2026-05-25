@@ -1,0 +1,21 @@
+<section class="reviews">
+    <div class="container">
+        <div class="reviews__head">
+            {{> _titleBuilder
+                tagWrapper = 'h2'
+                label = 'Що відчувають наші гості'
+                className = 'section-heading section-heading--mini'
+            }}
+            <div class="reviews__head-col">
+                {{> _sectionDescription
+                    text = 'Ми створюємо простір, до якого хочеться повертатись. І найкраще про це розповідають ті, хто вже був тут.'
+                }}
+                {{> _sliderArrows
+                    prevBtn = 'js-reviews-prev'
+                    nextBtn = 'js-reviews-next'
+                }}
+            </div>
+        </div>
+        {{> _reviewsSlider}}
+    </div>
+</section>

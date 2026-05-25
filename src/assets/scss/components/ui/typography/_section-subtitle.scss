@@ -1,0 +1,22 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.section-subtitle {
+    margin-bottom: rem(70px);
+    text-align: center;
+    font: 500 #{rem(80px)} / 103% $ff_accent;
+    @include media('desktop') {
+        font-size: rem(50px);
+    }
+
+    @include media('tablet') {
+        font-size: rem(36px);
+        margin-bottom: rem(32px);
+    }
+
+    @include media('mobile') {
+        font-size: rem(24px);
+        margin-bottom: rem(24px);
+    }
+}

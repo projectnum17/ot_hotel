@@ -1,0 +1,79 @@
+<div class="contact-box">
+    <form>
+        <div class="contact-box__fields">
+            <div class="contact-box__req">
+                <div class="contact-box__fieldset">
+                    <label for="contactLastName" class="contact-box__label">Прізвище*</label>
+                    <input required type="text" name="contactLastName" id="contactLastName" class="contact-box__field">
+                </div>
+                <div class="contact-box__fieldset">
+                    <label for="contactFirstName" class="contact-box__label">Ім'я*</label>
+                    <input required type="text" name="contactFirstName" id="contactFirstName"
+                        class="contact-box__field">
+                </div>
+                <div class="contact-box__fieldset">
+                    <label for="contactPhone" class="contact-box__label">Телефон*</label>
+                    <input required type="number" name="contactPhone" id="contactPhone" class="contact-box__field">
+                </div>
+                <div class="contact-box__fieldset">
+                    <label for="contactEmail" class="contact-box__label">Email*</label>
+                    <input required type="email" name="contactEmail" id="contactEmail" class="contact-box__field">
+                </div>
+            </div>
+            <div class="contact-box__guests">
+                <div class="col">
+                    <div class="contact-box__fieldset">
+                        <label for="contactAdultValue" class="contact-box__label">К-сть дорослих</label>
+                        <input type="number" name="contactAdultValue" id="contactAdultValue" class="contact-box__field">
+                    </div>
+                    <div class="contact-box__fieldset">
+                        <label for="contactAdultAge" class="contact-box__label">Вік</label>
+                        <input type="number" name="contactAdultAge" id="contactAdultAge" class="contact-box__field">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="contact-box__fieldset">
+                        <label for="contactChildValue" class="contact-box__label">К-сть дітей</label>
+                        <input type="number" name="contactChildValue" id="contactChildValue" class="contact-box__field">
+                    </div>
+                    <div class="contact-box__fieldset">
+                        <label for="contactChildAge" class="contact-box__label">Вік</label>
+                        <input type="number" name="contactChildAge" id="contactChildAge" class="contact-box__field">
+                    </div>
+                </div>
+            </div>
+            <div class="contact-box__dates">
+                <div class="contact-box__fieldset">
+                    <label for="contactCheckIn" class="contact-box__label">Дата заїзду</label>
+                    <div class="contact-box__wrapper">
+                        <input readonly type="text" name="contactCheckIn" id="contactCheckIn"
+                            class="contact-box__field js-date-trigger js-date-checkIn">
+                        <svg>
+                            <use xlink:href="./assets/images/icons/svg/sprite.svg#calendar"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="contact-box__fieldset">
+                    <label for="contactCheckOut" class="contact-box__label">Дата заїзду</label>
+                    <div class="contact-box__wrapper">
+                        <input readonly type="text" name="contactCheckOut" id="contactCheckOut"
+                            class="contact-box__field js-date-trigger js-date-checkOut">
+                        <svg>
+                            <use xlink:href="./assets/images/icons/svg/sprite.svg#calendar"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-box__fieldset">
+                <label for="contactMessage" class="contact-box__label">Повідомлення</label>
+                <textarea  class="contact-box__field contact-box__field--area" name="contactMessage" id="contactMessage"></textarea>
+            </div>
+        </div>
+        <button type="submit" class="link-route">
+            відправити
+            <svg>
+                <use xlink:href="./assets/images/icons/svg/sprite.svg#arrow-r"></use>
+            </svg>
+        </button>
+    </form>
+</div>

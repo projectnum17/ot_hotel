@@ -1,0 +1,251 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+body {
+    &:has(.header.is-transform) {
+        .benefits__titles {
+            top: 0;
+        }
+    }
+}
+
+.benefits {
+    --block-h: #{rem(150px)};
+
+    padding-block: rem(110px);
+    @include media('tablet') {
+        padding-block: rem(56px);
+    }
+    @include media('mobile') {
+        padding-block: rem(28px);
+        --block-h: #{rem(24px)};
+    }
+
+    .container {
+        display: flex;
+        gap: rem(24px);
+        justify-content: space-between;
+        align-items: flex-start;
+        @include media('tablet') {
+            flex-direction: column;
+            padding: 0;
+        }
+    }
+
+    .section-heading {
+        transform: scale(0.6);
+        line-height: 84%;
+        transform-origin: left center;
+        display: inline-flex;
+        align-items: center;
+        gap: rem(20px);
+        vertical-align: middle;
+        opacity: 0.5;
+        will-change: transform;
+        @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include media('tablet') {
+            width: 100%;
+            max-width: 370px;
+            flex-shrink: 0;
+            transform: scale(0.8);
+            width: max-content;
+            max-width: 100%;
+        }
+
+        @include media('mobile') {
+            gap: rem(8px);
+        }
+
+        &::before {
+            content: '~';
+            font-size: 0;
+            @include transitions(
+                0.3s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+        }
+
+        &.is-active {
+            opacity: 1;
+            transform: scale(1);
+            &::before {
+                font-size: rem(80px);
+                @include media('tablet') {
+                    font-size: rem(42px);
+                }
+
+                @include media('mobile') {
+                    font-size: rem(30px);
+                }
+            }
+        }
+    }
+
+    &__items {
+        overflow: hidden;
+        height: calc(90vh - var(--block-h));
+        @include media('tablet') {
+            height: max-content;
+            min-height: rem(90px);
+            display: flex;
+            align-items: center;
+            padding-block: rem(12px);
+        }
+        @include media('mobile') {
+            min-height: rem(70px);
+        }
+
+        &-inner {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            gap: var(--block-h);
+            @include transitions(
+                0.5s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+            @include media('tablet') {
+                flex-direction: row;
+                align-items: center;
+                gap: rem(12px);
+            }
+            @include media('mobile') {
+                gap: rem(5px);
+            }
+        }
+    }
+
+    &__titles {
+        position: sticky;
+        width: 100%;
+        top: rem(50px);
+        @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include media('tablet') {
+            z-index: 2;
+            top: calc(var(--header-h) - #{rem(2px)});
+            background: $bg_content;
+        }
+
+        &::after,
+        &::before {
+            z-index: 2;
+            content: '';
+            position: absolute;
+            pointer-events: none;
+            background: linear-gradient(
+                180deg,
+                #ebe3db 0%,
+                rgba(235, 227, 219, 0) 100%
+            );
+            width: 100%;
+            height: calc(calc(90vh - var(--block-h)) / 2);
+            @include media('tablet') {
+                height: 100%;
+                width: rem(50px);
+                background: linear-gradient(
+                    90deg,
+                    #ebe3db 0%,
+
+                    rgba(235, 227, 219, 0) 100%
+                );
+            }
+        }
+
+        &::after {
+            top: 0;
+            @include media('tablet') {
+                left: 0;
+            }
+        }
+
+        &::before {
+            transform: rotate(180deg);
+            bottom: 0;
+            @include media('tablet') {
+                right: 0;
+            }
+        }
+    }
+
+    &__previews {
+        max-width: rem(723px);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: var(--block-h);
+        @include media('tablet') {
+            max-width: 100%;
+            gap: rem(56px);
+            padding-inline: var(--container_pdd);
+        }
+    }
+
+    &__preview {
+        flex-direction: column;
+        gap: rem(48px);
+        display: flex;
+        transform: translateX(#{rem(50px)});
+        @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+
+        @include media('tablet') {
+            transform: translate(0);
+        }
+
+        @include media('mobile') {
+            gap: rem(12px);
+        }
+
+        &.is-active {
+            transform: translate(0);
+        }
+        @include hover {
+            .benefits__pic img {
+                transform: scale(1.15);
+            }
+            .link-route {
+                svg {
+                    transform: translateX(3px);
+                }
+
+                &::after {
+                    width: rem(35px);
+                    height: rem(35px);
+                }
+            }
+        }
+    }
+
+    &__pic {
+        width: 100%;
+        height: rem(557px);
+        overflow: hidden;
+        @include media('tablet') {
+            height: auto;
+            aspect-ratio: 300 / 250;
+        }
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            @include transitions(
+                0.5s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+        }
+    }
+
+    &__info {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: rem(12px);
+        @include media('mobile') {
+            flex-wrap: wrap;
+        }
+    }
+
+    .section-descr {
+        max-width: 50%;
+    }
+}

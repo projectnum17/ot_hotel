@@ -1,0 +1,53 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.presentation {
+    &__boxes {
+        @include media('mobile') {
+            display: flex;
+            flex-direction: column;
+            gap: rem(24px);
+        }
+        .present-box {
+            &:nth-child(odd) {
+                .present-box__info {
+                    padding-left: max(
+                        var(--container_pdd),
+                        calc(
+                            (100% - #{$container_wdth}) / 2 +
+                                var(--container_pdd)
+                        )
+                    );
+                    padding-right: rem(50px);
+
+                    @include media('mobile') {
+                        padding-inline: var(--container_pdd);
+                    }
+                }
+            }
+
+            &:nth-child(even) {
+                .container {
+                    flex-direction: row-reverse;
+                    @include media('mobile') {
+                        flex-direction: column-reverse;
+                    }
+                }
+                .present-box__info {
+                    padding-right: max(
+                        var(--container_pdd),
+                        calc(
+                            (100% - #{$container_wdth}) / 2 +
+                                var(--container_pdd)
+                        )
+                    );
+                    padding-left: rem(50px);
+                    @include media('mobile') {
+                        padding-inline: var(--container_pdd);
+                    }
+                }
+            }
+        }
+    }
+}

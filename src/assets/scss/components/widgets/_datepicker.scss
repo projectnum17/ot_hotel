@@ -1,0 +1,32 @@
+@use '../../base/var' as *;
+@use '../../base/mixins' as *;
+@use '../../base/media' as *;
+
+.air-datepicker {
+    z-index: 2;
+    background: $bg_content;
+    border-color: rgba(43, 18, 10, 0.6980392157) !important;
+
+    &-nav {
+        border-color: rgba(43, 18, 10, 0.6980392157) !important;
+    }
+
+    .air-datepicker-body--day-name {
+        color: rgba(43, 18, 10, 0.6980392157);
+    }
+
+    .air-datepicker-cell {
+        &.-selected- {
+            background: rgba(43, 18, 10, 0.6980392157);
+        }
+        &.-current- {
+            color: #fff;
+            background: rgb(43 18 10 / 34%);
+        }
+    }
+
+    .air-datepicker--pointer:after {
+        background: $bg_content;
+        border-color: rgba(43, 18, 10, 0.6980392157) !important;
+    }
+}

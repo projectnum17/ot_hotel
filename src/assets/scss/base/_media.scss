@@ -1,0 +1,23 @@
+@mixin media($size) {
+    @if $size == 'mobile' {
+        @media (max-width: 767.98px) {
+            @content;
+        }
+    } @else if $size == 'tablet' {
+        @media (max-width: 991.98px) {
+            @content;
+        }
+    } @else if $size == 'laptop' {
+        @media (max-width: 1024.98px) {
+            @content;
+        }
+    } @else if $size == 'desktop' {
+        @media (max-width: 1199.98px) {
+            @content;
+        }
+    } @else if $size == 'desktop-lg' {
+        @media (max-width: 1440.98px) {
+            @content;
+        }
+    }
+}

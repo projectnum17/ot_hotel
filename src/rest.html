@@ -1,0 +1,35 @@
+---
+layout: default
+pageName: Restaurant
+pageDescription: Restaurant
+headerCLass: header--simple
+---
+
+{{> _info
+    title = 'Ресторан'
+    description = 'Тиша, тепло і відновлення для тіла і думок'
+    picture = './assets/images/rest.png'
+}}
+{{> _about
+    tagText = 'ресторан'
+    description = '
+        <h2 class="section-info">
+            Нашими кухарями створені основне та дитяче меню, з увагою до смаку, якості продуктів і комфорту кожного гостя.
+        </h2>
+    '
+}}
+{{> _menu}}
+{{> _carousel
+    label = 'Інтер’єр'
+    thumbnails=(
+        array
+            (hash picture='./assets/images/c_5.jpg')
+            (hash picture='./assets/images/c_6.jpg')
+            (hash picture='./assets/images/c_7.jpg')
+    )
+    description = 1
+    text = 'Ресторан готелю пропонує гостям страви європейської кухні, приготовані з місцевих продуктів. Нашими кухарями розроблені основне та дитяче меню. Крім того, завжди актуально сезонна пропозиція.'
+}}
+{{> _reviews}}
+{{> _faq picture = './assets/images/faq.jpg'}}
+{{> _preview}}

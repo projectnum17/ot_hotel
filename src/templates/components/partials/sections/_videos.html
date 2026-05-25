@@ -1,0 +1,24 @@
+<section class="videos">
+    <div class="container">
+        <div class="videos__head">
+            {{> _titleBuilder
+                className = 'section-heading section-heading--sm'
+                label = 'Відео, що передають атмосферу'
+                tagWrapper = 'h2'
+            }}
+            {{> _sectionDescription
+                text = 'Короткі відео з подій, процесів та проєктів, які дозволяють краще відчути підхід, масштаб та характер нашої роботи.'
+            }}
+        </div>
+    </div>
+    <div class="videos__collect">
+        {{#each videosCollect.videosCollect}}
+            <div class="videos__rec">
+                <video muted autoplay loop playsinline class="js-video-autoplay" poster="{{poster}}">
+                    <source data-src="{{source}}" type="video/mp4">
+                    <p>Your browser does not support the video tag.</p>
+                </video>
+            </div>
+        {{/each}}
+    </div>
+</section>

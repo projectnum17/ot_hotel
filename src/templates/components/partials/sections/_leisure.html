@@ -1,0 +1,33 @@
+<section class="leisure pt-lg">
+    {{> _svgLine}}
+    <div class="container">
+        {{> _titleBuilder
+        tagWrapper = 'h1'
+        className = 'section-title'
+        label = 'Дозвілля'
+        }}
+        <ul class="leisure__cards">
+            {{#each leisures.leisures}}
+            <li>
+                {{> _leisureBox this}}
+            </li>
+            {{/each}}
+            <li>
+                <div class="leisure__info">
+                    <div class="leisure__pricelist">
+                        <div class="leisure__point">
+                            <p class="leisure__title">Оренда Вело</p>
+                            <p class="leisure__time">1 год</p>
+                            <p class="leisure__price">150 грн</p>
+                        </div>
+                        <div class="leisure__point">
+                            <p class="leisure__title">Оренда каноє, SUP дошки</p>
+                            <p class="leisure__time">1 год</p>
+                            <p class="leisure__price">150 грн</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>

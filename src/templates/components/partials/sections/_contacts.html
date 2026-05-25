@@ -1,0 +1,75 @@
+<section class="contacts pt-lg">
+    <div class="container">
+        <div class="contacts__info">
+            {{> _titleBuilder
+                tagWrapper = 'h1'
+                className = 'section-heading section-heading--mini'
+                label = 'Контакти'
+            }}
+            <div class="contacts__items">
+                <div class="contacts__item">
+                    <p class="contacts__subtitle">Телефон</p>
+                    <ul class="contacts__list">
+                        <li>
+                            <a href="tel:+380671441441" class="contacts__connect">
+                                тел. +380671441441
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+380993495081" class="contacts__connect">
+                                тел. +380993495081
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contacts__item">
+                    <p class="contacts__subtitle">Email</p>
+                    <ul class="contacts__list">
+                        <li>
+                            <a href="mailto:info@otte-hotel.com.ua" class="contacts__connect">
+                                info@otte-hotel.com.ua
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contacts__item">
+                    <p class="contacts__subtitle">ЛокаціЯ</p>
+                    <ul class="contacts__list">
+                        <li>
+                            <p class="contacts__connect">
+                                Україна Полтавська обл. м. Миргород вул. Боровиковского, 2
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <ul class="contacts__socials">
+                <li>
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <svg>
+                            <use xlink:href="./assets/images/icons/svg/sprite.svg#facebook"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <svg>
+                            <use xlink:href="./assets/images/icons/svg/sprite.svg#instagram"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="contacts__flow">
+            {{> _titleBuilder
+                tagWrapper = 'h2'
+                className = 'section-heading section-heading--mini'
+                label = 'Уточніть наявність місць'
+            }}
+            {{> _contactBox}}
+        </div>
+    </div>
+    <div class="contacts__map">
+        <img loading="lazy" decoding="async" src="./assets/images/geo.png" alt="Map">
+    </div>
+</section>

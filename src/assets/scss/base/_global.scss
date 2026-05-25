@@ -1,0 +1,43 @@
+@use 'mixins' as *;
+@use 'media' as *;
+@use 'var' as *;
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-weight: 400;
+    font-size: rem(16px);
+    line-height: 130%;
+    font-family: $ff_accent, $system-ff;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    background: $bg_content;
+    color: $c_content;
+    @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+
+    &.is-locked {
+        overflow: hidden;
+    }
+}
+
+main {
+    flex: 1;
+}
+
+button {
+    @include reset_button;
+    display: flex;
+    color: inherit;
+}
+
+a {
+    @include reset_link;
+}
+
+svg {
+    fill: currentColor;
+}

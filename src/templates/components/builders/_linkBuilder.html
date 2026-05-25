@@ -1,0 +1,15 @@
+<a href="{{url}}"
+   {{#if className}}class="{{className}}"{{/if}}
+   {{#if blank}}target="_blank"{{/if}}
+>
+    {{#if icon}}
+        <img src="{{icon}}" alt="{{iconAlt}}">
+    {{/if}}
+    {{#if label}}
+        {{#if tagWrapper}}
+            <{{tagWrapper}}>{{label}}</{{tagWrapper}}>
+        {{else}}
+            {{label}}
+        {{/if}}
+    {{/if}}
+</a>

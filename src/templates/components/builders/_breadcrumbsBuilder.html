@@ -1,0 +1,16 @@
+<nav class="breadcrumbs">
+    <ul>
+        {{#each breadcrumbs}}
+            <li>
+                {{#if @last}}
+                    <span>{{title}}</span>
+                {{else}}
+                    <a href="{{url}}">{{title}}</a>
+                    <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.4987 1.83301V9.16634M8.2487 2.74967L2.7487 8.24967M9.16536 5.49967H1.83203M8.2487 8.24967L2.7487 2.74967" stroke="#B0BEC9" stroke-linejoin="round"/>
+                    </svg>
+                {{/if}}
+            </li>
+        {{/each}}
+    </ul>
+</nav>

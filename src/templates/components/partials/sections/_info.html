@@ -1,0 +1,32 @@
+<section class="info pt-lg">
+    <div class="container">
+        {{> _titleBuilder
+            tagWrapper = 'h1'
+            label = title
+            className = 'section-subtitle'
+        }}
+        {{#unless descrHidden}}
+            {{> _sectionDescription
+                text = description
+            }}
+        {{/unless}}
+    </div>
+    {{#if videoProp}}
+    <div class="info__video">
+        <video muted autoplay loop playsinline class="js-video-autoplay" poster="{{ posterSrc }}">
+            <source data-src="{{ videoSrc }}" type="video/mp4">
+            <p>Your browser does not support the video tag.</p>
+        </video>
+    </div>
+    {{else}}
+        {{#if galleryProp}}
+        {{> _carouselBox
+            pictures = thumbnails
+        }}
+        {{else}}
+        <div class="info__pic{{#if blur}} info__pic--blur{{/if}}">
+            <img src="{{ picture }}" alt="Picture">
+        </div>
+        {{/if}}
+    {{/if}}
+</section>

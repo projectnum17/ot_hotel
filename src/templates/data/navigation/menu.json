@@ -1,0 +1,63 @@
+{
+    "asideMenu": {
+        "main": [
+            {
+                "title": "НОМЕРИ",
+                "url": "javascript: void(0)",
+                "submenu": [
+                    { "title": "СІМЕЙНИЙ НОМЕР", "url": "javascript: void(0)" },
+                    { "title": "Стандарт", "url": "javascript: void(0)" }
+                ]
+            },
+            {
+                "title": "ДОЗВІЛЛЯ",
+                "url": "javascript: void(0)",
+                "submenu": [
+                    { "title": "SPA простір", "url": "javascript: void(0)" },
+                    {
+                        "title": "Курорт «Миргород»",
+                        "url": "javascript: void(0)"
+                    },
+                    { "title": "Каное", "url": "javascript: void(0)" },
+                    { "title": "Екскурсії", "url": "javascript: void(0)" }
+                ]
+            },
+            { "title": "БРОНЮВАННЯ", "url": "javascript: void(0)" },
+            { "title": "ОЗДОРОВЛЕННЯ", "url": "javascript: void(0)" },
+            { "title": "РЕСТОРАН", "url": "javascript: void(0)" },
+            { "title": "ІВЕНТИ", "url": "javascript: void(0)" }
+        ],
+        "secondary": [
+            { "title": "ФІЛОСОФІЯ ГОТЕЛЮ", "url": "javascript: void(0)" },
+            { "title": "ФОТОГАЛЕРЕЯ", "url": "javascript: void(0)" },
+            { "title": "3-D ЕКСКУРСІЯ", "url": "javascript: void(0)" },
+            { "title": "КОНТАКТИ", "url": "javascript: void(0)" },
+            { "title": "НОВИНИ", "url": "javascript: void(0)" }
+        ]
+    },
+
+    "menuFooter": {
+        "pages": [
+            { "title": "ФІЛОСОФІЯ ГОТЕЛЮ", "url": "javascript: void(0)" },
+            { "title": "НОМЕРИ", "url": "javascript: void(0)" },
+            { "title": "ДОЗВІЛЛЯ", "url": "javascript: void(0)" },
+            { "title": "БРОНЮВАННЯ", "url": "javascript: void(0)" },
+            { "title": "ФОТОГАЛЕРЕЯ", "url": "javascript: void(0)" },
+            { "title": "3-D ЕКСКУРСІЯ", "url": "javascript: void(0)" },
+            { "title": "РЕСТОРАН", "url": "javascript: void(0)" },
+            { "title": "НОВИНИ", "url": "javascript: void(0)" },
+            { "title": "КОНТАКТИ", "url": "javascript: void(0)" }
+        ],
+        "leisure": [
+            { "title": "SPA простір", "url": "javascript: void(0)" },
+            { "title": "Курорт «Миргород»", "url": "javascript: void(0)" },
+            { "title": "Каное", "url": "javascript: void(0)" },
+            { "title": "Екскурсії", "url": "javascript: void(0)" },
+            { "title": "Кінотеатр", "url": "javascript: void(0)" },
+            { "title": "Для малечі", "url": "javascript: void(0)" },
+            { "title": "Вело", "url": "javascript: void(0)" },
+            { "title": "Спортивний майданчік", "url": "javascript: void(0)" },
+            { "title": "Теніс", "url": "javascript: void(0)" }
+        ]
+    }
+}

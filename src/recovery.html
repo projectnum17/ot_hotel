@@ -1,0 +1,46 @@
+---
+layout: default
+pageName: Recovery
+pageDescription: Recovery
+headerCLass: header--simple
+---
+
+{{> _info
+    title = 'Оздоровлення'
+    description = 'Програми лікування та відновлення у Миргороді поєднують природні ресурси курорту, сучасні оздоровчі методики та комфортний формат відпочинку.'
+    picture = './assets/images/recovery.png'
+}}
+{{> _specifics}}
+{{> _about
+    sectionSm = 1
+    tagText = 'Оздоровлення'
+    description = '
+        <h2 class="section-heading section-heading--mini">Основні напрямки оздоровлення</h2>
+    '
+}}
+{{> _presentationRecovery}}
+{{> _procedures
+    title = 'Детальніше про найпопулярніші процедури'
+    slides=(
+        array
+            (hash
+                picture= './assets/images/proc_5.png'
+                title = 'грязьове обгортання'
+            )
+            (hash
+                picture= './assets/images/proc_6.png'
+                title = 'електрогрязелікування'
+            )
+            (hash
+                picture= './assets/images/proc_7.png'
+                title = 'Ароматичні ванни'
+            )
+            (hash
+                picture= './assets/images/proc_8.png'
+                title = 'Лікувальні душі'
+            )
+    )
+}}
+{{> _addit}}
+{{> _faq picture = './assets/images/faq.jpg'}}
+{{> _preview}}

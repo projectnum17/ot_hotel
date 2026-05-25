@@ -1,0 +1,211 @@
+<section class="rules">
+    <div class="rules__preview">
+        <img src="./assets/images/rules-bg.jpg" alt="" class="rules__bg">
+        <div class="rules__about">
+            {{> _svgLine}}
+            <div class="container">
+                <div class="block">
+                    <div class="rules__about-pic">
+                        <img src="./assets/images/rules.png" alt="Picture">
+                    </div>
+                    <div class="block__content">
+                        <p>
+                            За роки роботи у команди Отте склалися правила, завдяки яким всі ми гарантуємо
+                            <span>відповідний
+                                сервіс і
+                                комфорт</span>. Ми пишаємося тим, що за нами закріпилася слава готелю з індивідуальним
+                            підходом до кожного
+                            гостя. Тому, просимо Вас з розумінням ставитися до інформації нижче.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rules__info">
+            <div class="container">
+                {{> _titleBuilder
+                tagWrapper = 'h1'
+                className = 'section-subtitle'
+                label = 'Правила'
+                }}
+                <div class="rules__accommodation">
+                    <ul class="rules__accommodation-list">
+                        <li>
+                            Оплата здійснюється в національній валюті – <span class="it">гривні</span>;
+                        </li>
+                        <li>
+                            Час виїзду Гостей – <span class="lg it">12.00 поточної доби</span> за місцевим часом;
+                        </li>
+                        <li>
+                            Реєстрації та поселення в Готелі – <span class="md">з 14.00 поточної доби</span> за місцевим
+                            часом;
+                        </li>
+                    </ul>
+                    <div class="rules__accommodation-whom">
+                        <div class="row">
+                            <h3>Проживання з дітьми</h3>
+                            <p>
+                                <span>Для діток до 3 років ми пропонуємо дитяче ліжечко</span>
+                            </p>
+                        </div>
+                        <div class="row">
+                            <h3>Проживання з дітьми</h3>
+                            <p>
+                                <span>За додаткову плату</span> дозволено проживання з кішечками та собачками вагою до 7
+                                кг.
+                                <span>Хом’ячки, шиншили, морські свинки</span> , ласкаво просимо до нас! Але, будь
+                                ласка, не
+                                залишайте своїх кліточок, ви можете загубитися. Для комфортного відпочинку з домашнім
+                                улюбленцем
+                                ми надаємо для ваших послуг: ліжечко, рушник, миски для їжі та води,засоби для
+                                прибирання за
+                                своїм улюбленцем.
+                            </p>
+                            <p>
+                                При бронюванні обов’язково попередьте адміністратора готелю, що приїдете на відпочинок
+                                із
+                                твариною та повідомте його вид і розміри. <span>Не залишайте тваринку одну без
+                                    власника</span>
+                                на всій території готелю – номери, холл, ресторан.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rules__comfort">
+                <div class="container">
+                    <div class="rules__comfort-text">
+                        <h2>Для комфорту та безпеки</h2>
+                        <p>
+                            Дотримуйтесь правил пожежної безпеки:
+                            <span>Паління заборонено в приміщені готелю</span> (паління електронних сигарет та кальяну
+                            також) .За паління в номері та інших заборонених місцях, настає адміністративна
+                            відповідальність
+                            ,згідно статті 175-1 КУпАП та являється підставою для виселення.
+                            Не користуйтеся електронагрівальними приладами, які не входять до комплектації номера і не
+                            запалюйте свічки.
+                            При заселенні ознайомтесь з переліком і справністю майна в номері, переданої Вам у тимчасове
+                            користування і переконайтеся, що наданий перелік відповідає дійсності;
+
+
+                        </p>
+                        <p>
+                            У разі втрати або завдання шкоди майну готелю, відшкодування збитків відбувається
+                            <span>згідно з
+                                чинним законодавством України</span>. Розмір відшкодування збитків нараховується згідно
+                            із
+                            затвердженим
+                            директором прейскурантом.
+                            Не переставляти меблі в номері без погодження з адміністрацією – це може зіпсувати меблі і
+                            стіни
+                            номера.
+                        </p>
+
+                        <p>
+                            Якщо Ви маєте бажання запросити в номер осіб, які не проживають в Готелі, Ви повинні
+                            зареєструвати їх у <span>адміністратора. Адміністрація готелю не несе відповідальності за
+                                Ваші
+                                речі в
+                                разі перебування в номері сторонньої особи.</span>
+                            Перебування відвідувачів на території готелю дозволяється з 08.00 до 22.00.
+                        </p>
+
+                        <p>
+                            Від’їжджаючи з Готелю Гість повинен здати номер покоївці та розрахуватися за всі спожиті
+                            послуги.
+                            Якщо гість систематично <span>порушує правила проживання в готелі, що створює незручності
+                                для
+                                інших</span>
+                            гостей або призводить до матеріальних збитків адміністрація готелю має право відмовити у
+                            поселенні або здійснити виселення
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="rules__services">
+            {{> _svgLine}}
+            {{> _titleBuilder
+            tagWrapper = 'h2'
+            className = 'section-info'
+            label = 'Безкоштовні послуги'
+            }}
+            <div class="rules__services-box">
+                <ul class="rules__services-list">
+                    <li>
+                        <img loading="lazy" decoding="async" src="./assets/images/icons/rul_1.png" alt="Icon">
+                        Кінозал (09.00-22.00);
+                    </li>
+                    <li>
+                        <img loading="lazy" decoding="async" src="./assets/images/icons/rul_1.png" alt="Icon">
+                        СПА (08.00-23.00);
+                    </li>
+                    <li>
+                        <img loading="lazy" decoding="async" src="./assets/images/icons/rul_1.png" alt="Icon">
+                        Користування дитячою кімнатою та дитячим майданчиком;
+                    </li>
+                    <li>
+                        <img loading="lazy" decoding="async" src="./assets/images/icons/rul_1.png" alt="Icon">
+                        Надання дитячого ліжечка;
+                    </li>
+                </ul>
+                <ul class="rules__services-list">
+                    <li>
+                        <img loading="lazy" decoding="async" src="./assets/images/icons/rul_1.png" alt="Icon">
+                        Паркування (зверніть увагу – готель не надає послуг із зарядки електромобілів)
+                    </li>
+                    <li>
+                        <img loading="lazy" decoding="async" src="./assets/images/icons/rul_1.png" alt="Icon">
+                        Інтернет WI-FI;
+                    </li>
+                    <li>
+                        <img loading="lazy" decoding="async" src="./assets/images/icons/rul_1.png" alt="Icon">
+                        Надання прасувальної дошки і праски.
+                    </li>
+                </ul>
+            </div>
+            {{> _titleBuilder
+            tagWrapper = 'h2'
+            className = 'section-subtitle'
+            label = 'Послуги розраховані тільки для гостей, які проживають в готелі'
+            }}
+            {{> _titleBuilder
+            tagWrapper = 'h2'
+            className = 'section-info'
+            label = 'За додаткову плату'
+            }}
+            <div class="rules__services-box">
+                <ul class="rules__services-list">
+                    <li>
+                        <img loading="lazy" decoding="async" src="./assets/images/icons/pay_1.png" alt="Icon">
+                        Міні-бар
+                    </li>
+                    <li>
+                        <img loading="lazy" decoding="async" src="./assets/images/icons/pay_1.png" alt="Icon">
+                        Ресторан (08.00-21.00)
+                    </li>
+                    <li>
+                        <img loading="lazy" decoding="async" src="./assets/images/icons/pay_1.png" alt="Icon">
+                        Послуги пральні;
+                    </li>
+                </ul>
+                <ul class="rules__services-list">
+                    <li>
+                        <img loading="lazy" decoding="async" src="./assets/images/icons/pay_1.png" alt="Icon">
+                        Каное
+                    </li>
+                    <li>
+                        <img loading="lazy" decoding="async" src="./assets/images/icons/pay_1.png" alt="Icon">
+                        SUP
+                    </li>
+                    <li>
+                        <img loading="lazy" decoding="async" src="./assets/images/icons/pay_1.png" alt="Icon">
+                        Прокат велосипедів;
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,37 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.list-box {
+    display: flex;
+    flex-direction: column;
+    gap: rem(31px);
+    list-style-type: none;
+    @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+    @include media('mobile') {
+        gap: rem(16px);
+    }
+
+    li {
+        position: relative;
+        padding-left: rem(61px);
+        font: 400 #{rem(24px)} / 110% $ff_base;
+        color: #191716cc;
+        @include media('mobile') {
+            font-size: rem(18px);
+            padding-left: rem(50px);
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: rem(40px);
+            height: rem(6px);
+            background: url('../images/icons/arrow-r.svg') no-repeat center
+                center;
+        }
+    }
+}

@@ -1,0 +1,102 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.review-box {
+    display: flex;
+    flex-direction: column;
+    gap: rem(78px);
+    padding: rem(20px);
+    max-width: rem(471px);
+    height: 100%;
+    background: #2b120a1a;
+
+    @include media('mobile') {
+        max-width: rem(320px);
+        padding: rem(12px);
+        gap: rem(35px);
+    }
+
+    &__head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: rem(8px);
+        @include media('mobile') {
+            gap: rem(6px);
+        }
+    }
+
+    &__answer {
+        margin-top: auto;
+
+        p {
+            font: 400 #{rem(20px)} / 100% $ff_base;
+            @include media('mobile') {
+                font-size: rem(16px);
+            }
+        }
+    }
+
+    &__name {
+        display: inline-flex;
+        align-items: center;
+        gap: rem(10px);
+        padding: rem(9px);
+        border-radius: 999px;
+        font: 400 #{rem(18px)} / 100% $ff_base;
+        border: 1px solid #2b120a33;
+
+        @include media('mobile') {
+            font-size: rem(16px);
+            padding: rem(6px) rem(12px);
+            gap: rem(7px);
+        }
+
+        &::before {
+            content: '';
+            border-radius: 50%;
+            width: rem(4px);
+            height: rem(4px);
+            flex-shrink: 0;
+            background: $c_content;
+        }
+    }
+
+    &__media {
+        display: flex;
+        align-items: center;
+        gap: rem(7px);
+        @include media('mobile') {
+            gap: rem(5px);
+        }
+
+        a {
+            width: rem(42px);
+            height: rem(42px);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 1px solid $c_content;
+            color: $c_content;
+            @include transitions(
+                0.3s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+            @include hover {
+                transform: scale(1.05);
+            }
+
+            @include media('mobile') {
+                width: rem(36px);
+                height: rem(36px);
+            }
+
+            svg {
+                width: rem(20px);
+                height: rem(20px);
+            }
+        }
+    }
+}

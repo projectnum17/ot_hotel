@@ -1,0 +1,63 @@
+@use 'sass:math';
+@use 'sass:list';
+@mixin fluid-text($max: 48, $min: 16) {
+    font-size: clamp(#{$min}px, #{math.div($max, 1200) * 100}vw, #{$max}px);
+}
+
+@mixin reset_link {
+    color: inherit;
+    text-decoration: none;
+}
+
+@mixin reset_button {
+    padding: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+@mixin hover {
+    @media (hover: hover) {
+        &:hover {
+            @content;
+        }
+    }
+
+    @media (hover: none) {
+        &:active {
+            @content;
+        }
+    }
+}
+//example @include hover { color: red; background: yellow; }
+
+@mixin flexCenter($gap: 0) {
+    display: flex;
+    align-items: center;
+    gap: $gap;
+}
+// example @include flexCenter(10px)
+
+@mixin transitions($duration, $timing-function: linear, $properties...) {
+    @if list.length($properties) > 0 {
+        $transitions: ();
+
+        @each $property in $properties {
+            $transitions: list.append(
+                $transitions,
+                #{$property} #{$duration} #{$timing-function},
+
+                comma
+            );
+        }
+
+        transition: $transitions;
+    } @else {
+        transition: all #{$duration} #{$timing-function};
+    }
+}
+//example @include transitions(0.2s) or @include transitions(0.2s, linear, background, color)
+
+@function rem($px, $base: 16px) {
+    @return math.div($px, $base) * 1rem;
+}

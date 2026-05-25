@@ -1,0 +1,11 @@
+<section class="about{{#if sectionSm}} about--sm{{/if}}">
+    {{> _svgLine}}
+    <div class="container">
+        <div class="about__content">
+            {{> _tag label = tagText}}
+            <div class="about__description">
+                {{{ description }}}
+            </div>
+        </div>
+    </div>
+</section>

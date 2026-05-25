@@ -1,0 +1,169 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.road {
+    padding-block: rem(40px);
+    @include media('mobile') {
+        padding-block: rem(56px) rem(28px);
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        @include media('tablet') {
+            flex-direction: column;
+            gap: rem(24px);
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: rem(50px);
+        max-width: rem(650px);
+        width: 100%;
+        @include media('tablet') {
+            max-width: 100%;
+        }
+        @include media('mobile') {
+            gap: rem(24px);
+        }
+    }
+
+    &__txts {
+        --list-type: #{rem(40px)};
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0 0 rem(50px) 0;
+            font: 400 #{rem(60px)} / 90% $ff_accent;
+            @include media('tablet') {
+                font-size: rem(42px);
+                margin: 0 0 rem(32px) 0;
+            }
+            @include media('mobile') {
+                font-size: rem(24px);
+                margin: 0 0 rem(24px) 0;
+            }
+        }
+
+        p {
+            font: 400 #{rem(24px)} / 100% $ff_base;
+            color: #191716;
+            @include media('tablet') {
+                font-size: rem(20px);
+            }
+            @include media('mobile') {
+                font-size: rem(18px);
+            }
+        }
+        ul,
+        ol {
+            margin: 0 0 rem(24px) 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: rem(31px);
+            list-style-type: none;
+
+            li {
+                position: relative;
+                padding-left: calc(var(--list-type) + #{rem(10px)});
+                font: 400 #{rem(24px)} / 110% $ff_base;
+                color: #191716cc;
+                @include media('tablet') {
+                    font-size: rem(18px);
+                }
+                @include media('mobile') {
+                    font-size: rem(16px);
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    flex-shrink: 0;
+                    width: var(--list-type);
+                    height: rem(10px);
+                    background: url('../images/icons/arrow-r.svg') no-repeat
+                        center center;
+                }
+            }
+        }
+
+        *:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__pic {
+        max-width: rem(900px);
+        width: 100%;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        gap: rem(60px);
+        @include media('mobile') {
+            flex-direction: column;
+            gap: rem(24px);
+        }
+
+        li {
+            @include media('tablet') {
+                flex: 1;
+            }
+            @include media('mobile') {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            &:nth-child(2) {
+                padding-inline: rem(60px);
+                border-left: 1px solid #2b120a33;
+                border-right: 1px solid #2b120a33;
+                @include media('mobile') {
+                    padding-block: rem(24px);
+                    padding-inline: 0;
+                    border-left: none;
+                    border-right: none;
+                    border-top: 1px solid #2b120a33;
+                    border-bottom: 1px solid #2b120a33;
+                }
+            }
+            img {
+                width: rem(50px);
+                height: rem(50px);
+                @include media('mobile') {
+                    width: rem(30px);
+                    height: rem(30px);
+                }
+            }
+
+            p {
+                margin: 0;
+                color: #191716;
+                &:first-of-type {
+                    margin-bottom: rem(8px);
+                    font: 400 #{rem(30px)} / 100% $ff_accent;
+                    @include media('mobile') {
+                        font-size: rem(22px);
+                    }
+                }
+                &:last-of-type {
+                    font: 400 #{rem(20px)} / 100% $ff_base;
+                    @include media('mobile') {
+                        font-size: rem(16px);
+                    }
+                }
+            }
+        }
+    }
+}

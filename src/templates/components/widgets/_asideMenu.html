@@ -1,0 +1,70 @@
+<div class="aside-menu js-menu">
+    <div class="aside-menu__box">
+        <div class="container">
+            <div class="aside-menu__content">
+                <div class="aside-menu__routes">
+                    <div class="aside-menu__main">
+                        <ul>
+                            {{#each menu.asideMenu.main}}
+                            <li>
+                                <a href="{{ url }}">{{ title }}</a>
+                                {{#if submenu}}
+                                <ul>
+                                    <li>
+                                        <ul>
+                                            {{#each submenu}}
+                                            <li>
+                                                <a href="{{url}}">
+                                                    {{title}}
+                                                    <span></span>
+                                                </a>
+                                            </li>
+                                            {{/each}}
+                                        </ul>
+                                    </li>
+
+                                </ul>
+                                {{/if}}
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                    <div class="aside-menu__secondary">
+                        <ul>
+                            {{#each menu.asideMenu.secondary}}
+                            <li>
+                                <a href="{{ url }}">{{ title }}</a>
+                            </li>
+                            {{/each}}
+                        </ul>
+                        <div class="aside-menu__call">
+                            <p class="aside-menu__title">Бронювання та консУльтація</p>
+                            <a href="tel:+380671441441">(067) 144-14-41</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="aside-menu__address">
+                    <p class="aside-menu__title">де ми знаходимось?</p>
+                    <p class="aside-menu__target">
+                        Україна Полтавська обл. м. Миргород вул. Боровиковского, 2
+                    </p>
+                    {{> _linkRoute
+                    label = 'прокласти маршрут'
+                    }}
+                </div>
+            </div>
+            <div class="aside-menu__mob">
+                <ul class="aside-menu__lang">
+                    <li>
+                        <a href="javascript: void(0)">ua</a>
+                    </li>
+                    <li>
+                        <a href="javascript: void(0)">en</a>
+                    </li>
+                </ul>
+                <a href="javascript: void(0)" class="aside-menu__btn glass-effect">Забронювати</a>
+            </div>
+        </div>
+    </div>
+    {{> _introVideo}}
+</div>

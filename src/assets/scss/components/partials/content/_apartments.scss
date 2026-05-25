@@ -1,0 +1,42 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.apartments {
+    padding-block: rem(70px);
+    @include media('mobile') {
+        padding-block: rem(28px);
+    }
+
+    .section-heading {
+        line-height: 91%;
+    }
+
+    .link-route {
+        margin-right: calc(var(--link-h) / 2);
+    }
+
+    &__head {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: rem(24px);
+        margin-bottom: rem(50px);
+        @include media('mobile') {
+            margin-bottom: rem(24px);
+            flex-direction: column;
+            align-items: flex-start;
+            gap: rem(12px);
+        }
+    }
+
+    &__collect {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: rem(44px);
+        @include media('mobile') {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            gap: rem(24px);
+        }
+    }
+}

@@ -1,0 +1,40 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.reviews {
+    padding-block: rem(78px);
+    overflow: hidden;
+    @include media('tablet') {
+        padding-block: rem(56px);
+    }
+    @include media('mobile') {
+        padding-block: rem(28px);
+    }
+
+    .section-heading {
+        max-width: rem(487px);
+    }
+
+    &__head {
+        max-width: rem(1042px);
+        margin-bottom: rem(73px);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: rem(12px);
+
+        @include media('mobile') {
+            margin-bottom: rem(24px);
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &-col {
+            display: flex;
+            flex-direction: column;
+            gap: rem(14px);
+            max-width: rem(443px);
+        }
+    }
+}

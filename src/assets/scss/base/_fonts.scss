@@ -1,0 +1,15 @@
+@mixin font-face($font-family, $url, $weight, $style) {
+    @font-face {
+        font-family: '#{$font-family}';
+        src: url('../fonts/#{$url}.woff2') format('woff2');
+        font-weight: #{$weight};
+        font-display: swap;
+        font-style: $style;
+    }
+}
+
+@include font-face('Cormorant Garamond', 'ff_accent_300', 300, normal);
+@include font-face('Cormorant Garamond', 'ff_accent_400', 400, normal);
+@include font-face('Cormorant Garamond', 'ff_accent_500', 500, normal);
+@include font-face('Philosopher', 'ff_base_400', 400, normal);
+@include font-face('Great Vibes', 'ff_secondary', 400, normal);

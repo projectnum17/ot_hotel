@@ -1,0 +1,36 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.pagination-list {
+    display: flex;
+    align-items: center;
+    gap: rem(33px);
+
+    &__collect {
+        display: flex;
+        align-items: center;
+        gap: rem(16px);
+    }
+
+    &__btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        width: rem(38px);
+        height: rem(38px);
+        border: 1px solid transparent;
+        font: 400 #{rem(18px)} / 120% $ff_base;
+        @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include hover {
+            border-color: #2b120a33;
+        }
+
+        &.is-active {
+            border-color: #2b120a33;
+            background: #2b120a05;
+            box-shadow: 0px 1px 4px 0px #ffffff26;
+        }
+    }
+}

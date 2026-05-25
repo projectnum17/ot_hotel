@@ -1,0 +1,46 @@
+---
+layout: default
+pageName: SPA
+pageDescription: SPA
+headerCLass: header--simple
+---
+
+{{> _info
+    title = 'SPA простір'
+    description = 'Тиша, тепло і відновлення для тіла і думок'
+    picture = './assets/images/spa.jpg'
+}}
+{{> _about
+    tagText = 'спа'
+    description = '
+        <h2 class="section-info">
+            Ми створили SPA як місце, де можна зупинитись і видихнути, відчути турботу про тіло і повністю зануритись у відпочинок.
+        </h2>
+    '
+}}
+{{> _presentation}}
+{{> _procedures
+    title = 'Послуги масажу та спа-ритуали'
+    slides=(
+        array
+            (hash
+                picture= './assets/images/proc_1.png'
+                title = 'Іспанський масаж обличчя'
+            )
+            (hash
+                picture= './assets/images/proc_2.png'
+                title = 'Морський детокс'
+            )
+            (hash
+                picture= './assets/images/proc_3.png'
+                title = 'Японський масаж тіла (на татамі в одязі)'
+            )
+            (hash
+                picture= './assets/images/proc_4.png'
+                title = 'Сила мінералів'
+            )
+    )
+}}
+{{> _addit}}
+{{> _faq picture = './assets/images/faq.jpg'}}
+{{> _preview}}

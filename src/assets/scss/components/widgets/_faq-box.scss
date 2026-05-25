@@ -1,0 +1,74 @@
+@use '../../base/var' as *;
+@use '../../base/mixins' as *;
+@use '../../base/media' as *;
+
+.faq-box {
+    border-bottom: 1px solid #2b120a80;
+
+    &:has(.faq-box__question.is-clicked) {
+        .faq-box__question svg {
+            transform: scaleY(-1);
+        }
+        .faq-box__content {
+            padding-bottom: rem(30px);
+            grid-template-rows: 1fr;
+            @include media('mobile') {
+                padding-bottom: rem(16px);
+            }
+        }
+    }
+
+    &__question {
+        text-align: left;
+        padding: rem(30px) rem(20px);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: rem(5px);
+        font: 400 #{rem(30px)} / 100% $ff_base;
+
+        @include media('tablet') {
+            font-size: rem(24px);
+            padding: rem(20px) rem(12px);
+        }
+        @include media('mobile') {
+            font-size: rem(18px);
+            padding: rem(16px) 0;
+        }
+
+        svg {
+            width: rem(6px);
+            height: rem(40px);
+            @include transitions(
+                0.3s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+
+            @include media('mobile') {
+                height: rem(30px);
+            }
+        }
+    }
+
+    &__content {
+        padding-inline: rem(20px);
+        display: grid;
+        grid-template-rows: 0fr;
+        @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include media('tablet') {
+            padding-inline: rem(12px);
+        }
+        @include media('mobile') {
+            padding-inline: 0;
+        }
+    }
+
+    &__answer {
+        overflow: hidden;
+        font: 400 #{rem(18px)} / 100% $ff_base;
+        @include media('mobile') {
+            font-size: rem(16px);
+        }
+    }
+}

@@ -1,0 +1,14 @@
+<div class="carousel-box js-carousel-box">
+    <div class="carousel-box__handler swiper">
+        <div class="carousel-box__wrapper swiper-wrapper">
+            {{#each pictures}}
+            <div class="carousel-box__slide swiper-slide">
+                <div class="carousel-box__pic">
+                    <img loading="lazy" decoding="async" src="{{ picture }}" alt="Picture">
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    <div class="slider-progress js-carousel-progress"></div>
+</div>

@@ -1,0 +1,18 @@
+<section class="usefulness{{#if reverseSection}} usefulness--reverse{{/if}}">
+    <div class="container">
+        <div class="usefulness__col">
+            <div class="usefulness__txts">
+                {{{ descriptions }}}
+            </div>
+            <div class="usefulness__pic usefulness__pic--sm">
+                <img loading="lazy" decoding="async" src="{{ picSm }}" alt="Picture">
+            </div>
+        </div>
+        <div class="usefulness__col">
+            <div class="usefulness__pic usefulness__pic--lg">
+                <img loading="lazy" decoding="async" src="{{ picLg }}" alt="Picture">
+            </div>
+            {{> _linkRoute label = 'Забронювати'}}
+        </div>
+    </div>
+</section>

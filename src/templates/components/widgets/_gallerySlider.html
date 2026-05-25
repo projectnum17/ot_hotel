@@ -1,0 +1,27 @@
+<div class="gallery-slider">
+    <div class="gallery-slider__preview swiper js-gallery-lg">
+        <div class="gallery-slider__wrapper swiper-wrapper">
+            {{#each gallery.gallery}}
+                <div class="gallery-slider__slide swiper-slide">
+                    <div class="gallery-slider__pic gallery-slider__pic--lg">
+                        <img loading="lazy" decoding="async" src="{{ source }}" alt="Picture">
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+    <div class="gallery-slider__foot">
+        <div class="gallery-slider__pics swiper js-gallery-sm">
+            <div class="gallery-slider__wrapper swiper-wrapper">
+                {{#each gallery.gallery}}
+                    <div class="gallery-slider__slide swiper-slide">
+                        <div class="gallery-slider__pic gallery-slider__pic--sm">
+                            <img loading="lazy" decoding="async" src="{{ source }}" alt="Picture">
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+        {{> _linkRoute label = 'Детальніше' }}
+    </div>
+</div>

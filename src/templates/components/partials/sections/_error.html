@@ -1,0 +1,27 @@
+<section class="error">
+    <div class="container">
+        <div class="error__deco">
+            {{#count 2}}
+            <video muted autoplay loop playsinline class="js-video-autoplay" poster="">
+                <source data-src="./assets/video/grass.mp4" type="video/mp4">
+                <p>Your browser does not support the video tag.</p>
+            </video>
+            {{/count}}
+        </div>
+        <div class="error__content">
+            <span class="error__state">404</span>
+            <div class="error__panel">
+                <h1 class="error__title">Сторінку не знайдено</h1>
+                <p class="error__text">
+                    Схоже, щось пішло не так або сторінку було переміщено.  Перевірте адресу або поверніться на головну.
+                </p>
+                <a href="index.html" class="link-route">
+                    На головну
+                    <svg>
+                        <use xlink:href="./assets/images/icons/svg/sprite.svg#arrow-r"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

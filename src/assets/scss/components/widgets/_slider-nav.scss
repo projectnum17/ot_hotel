@@ -1,0 +1,64 @@
+@use '../../base/var' as *;
+@use '../../base/mixins' as *;
+@use '../../base/media' as *;
+
+.slider-nav {
+    display: flex;
+    align-items: center;
+    gap: rem(5px);
+    margin-bottom: rem(58px);
+
+    @include media('mobile') {
+        gap: rem(4px);
+        margin-bottom: rem(24px);
+    }
+
+    &__btn {
+        width: rem(38px);
+        height: rem(38px);
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #2b120a4d;
+        background: #ebe7e4;
+        @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+
+        &.swiper-button-disabled {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        svg {
+            width: rem(14px);
+            height: rem(8px);
+            @include transitions(
+                0.3s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+        }
+
+        &:first-child {
+            svg {
+                margin-right: 1px;
+            }
+
+            @include hover {
+                svg {
+                    transform: translateX(-3px);
+                }
+            }
+        }
+        &:last-child {
+            svg {
+                transform: rotate(180deg);
+                margin-left: 1px;
+            }
+            @include hover {
+                svg {
+                    transform: translateX(3px) rotate(180deg);
+                }
+            }
+        }
+    }
+}

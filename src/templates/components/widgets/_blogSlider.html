@@ -1,0 +1,9 @@
+<div class="blog-slider swiper js-blog-slider">
+    <div class="blog-slider__wrapper swiper-wrapper">
+        {{#each (sliceCollect blog.blog 0 10)}}
+        <div class="blog-slider__slide swiper-slide">
+            {{> _blogBox this}}
+        </div>
+        {{/each}}
+    </div>
+</div>

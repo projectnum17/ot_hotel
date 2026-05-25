@@ -1,0 +1,38 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.section-heading {
+    font: 400 #{rem(70px)} / 103% $ff_accent;
+
+    @include media('desktop') {
+        font-size: rem(56px);
+    }
+
+    @include media('tablet') {
+        font-size: rem(42px);
+    }
+
+    @include media('mobile') {
+        font-size: rem(30px);
+    }
+
+    &--sm {
+        font-size: rem(50px);
+        @include media('desktop') {
+            font-size: rem(42px);
+        }
+
+        @include media('tablet') {
+            font-size: rem(36px);
+        }
+
+        @include media('mobile') {
+            font-size: rem(28px);
+        }
+    }
+
+    &--mini {
+        line-height: 84%;
+    }
+}

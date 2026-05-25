@@ -1,0 +1,18 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.section-info {
+    font: 300 #{rem(50px)} / 98% $ff_accent;
+    @include media('desktop') {
+        font-size: rem(42px);
+    }
+
+    @include media('tablet') {
+        font-size: rem(36px);
+    }
+
+    @include media('mobile') {
+        font-size: rem(25px);
+    }
+}

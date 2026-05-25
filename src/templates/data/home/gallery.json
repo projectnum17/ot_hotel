@@ -1,0 +1,10 @@
+{
+    "gallery": [
+        { "source": "./assets/images/slide_1.jpg" },
+        { "source": "./assets/images/slide_2.jpg" },
+        { "source": "./assets/images/slide_3.jpg" },
+        { "source": "./assets/images/slide_4.jpg" },
+        { "source": "./assets/images/slide_5.jpg" },
+        { "source": "./assets/images/slide_6.jpg" }
+    ]
+}

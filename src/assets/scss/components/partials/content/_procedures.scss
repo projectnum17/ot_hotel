@@ -1,0 +1,18 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.procedures {
+    overflow: hidden;
+    padding-block: rem(60px);
+    @include media('mobile') {
+        padding-block: rem(28px);
+    }
+
+    .section-heading {
+        margin-bottom: rem(50px);
+        @include media('mobile') {
+            margin-bottom: rem(24px);
+        }
+    }
+}

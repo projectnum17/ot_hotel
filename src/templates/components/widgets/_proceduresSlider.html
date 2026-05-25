@@ -1,0 +1,17 @@
+<div class="procedures-slider">
+    <div class="procedures-slider__show swiper js-procedures-slider">
+        <div class="procedures-slider__wrapper swiper-wrapper">
+            {{#each slides}}
+            <div class="procedures-slider__slide swiper-slide">
+                <div class="procedures-slider__box">
+                    <div class="procedures-slider__pic">
+                        <img loading="lazy" decoding="async" src="{{ picture }}" alt="Picture">
+                    </div>
+                    <p class="procedures-slider__title">{{ title }}</p>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    <div class="slider-progress js-procedures-progress"></div>
+</div>

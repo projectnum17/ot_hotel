@@ -1,0 +1,52 @@
+{
+    "equipment": [
+        {
+            "benefit": "Кондіціонер",
+            "icon": "./assets/images/icons/svg/sprite.svg#icoCond"
+        },
+        {
+            "benefit": "Двоспальне ліжко",
+            "icon": "./assets/images/icons/svg/sprite.svg#icoBed"
+        },
+        {
+            "benefit": "Душ",
+            "icon": "./assets/images/icons/svg/sprite.svg#icoShower"
+        },
+        {
+            "benefit": "Туалет",
+            "icon": "./assets/images/icons/svg/sprite.svg#icoTualet"
+        },
+        {
+            "benefit": "Фен",
+            "icon": "./assets/images/icons/svg/sprite.svg#icoDryer"
+        },
+        {
+            "benefit": "Москітна сітка",
+            "icon": "./assets/images/icons/svg/sprite.svg#icoMesh"
+        },
+        {
+            "benefit": "Туалетно-косметичні засоби",
+            "icon": "./assets/images/icons/svg/sprite.svg#icoCosmetics"
+        },
+        {
+            "benefit": "Телевізор",
+            "icon": "./assets/images/icons/svg/sprite.svg#icoTV"
+        },
+        {
+            "benefit": "Халат",
+            "icon": "./assets/images/icons/svg/sprite.svg#icoBathrobe"
+        },
+        {
+            "benefit": "Рушники та капці",
+            "icon": "./assets/images/icons/svg/sprite.svg#icoTowel"
+        },
+        {
+            "benefit": "Сейф",
+            "icon": "./assets/images/icons/svg/sprite.svg#icoSafe"
+        },
+        {
+            "benefit": "Холодильник",
+            "icon": "./assets/images/icons/svg/sprite.svg#icoRefrigerator"
+        }
+    ]
+}

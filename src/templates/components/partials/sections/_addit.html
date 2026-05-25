@@ -1,0 +1,17 @@
+<section class="addit">
+    <div class="container">
+        {{> _titleBuilder
+            tagWrapper = 'h2'
+            className = 'section-heading section-heading--mini'
+            label = 'Рекомендуємо відвідати'
+        }}
+
+        <ul class="addit__cards">
+            {{#each (sliceCollect leisures.leisures 0 2)}}
+            <li>
+                {{> _leisureBox this}}
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</section>

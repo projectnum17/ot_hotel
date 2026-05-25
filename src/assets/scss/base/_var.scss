@@ -1,0 +1,41 @@
+@use 'media' as *;
+@use 'mixins' as *;
+
+$system-ff:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, sans-serif;
+
+$ff_accent: 'Cormorant Garamond', sans-serif;
+$ff_base: 'Philosopher', sans-serif;
+$ff_secondary: 'Great Vibes', sans-serif;
+
+$c_content: #2b120a;
+$c_content_half: #2b120acc;
+$c_content_light: #2b120a99;
+$c_border: #2b120a33;
+$c_brown: #e0d6cd;
+$c_white: #ffffff;
+
+$bg_content: #ebe3db;
+
+$container_wdth: #{rem(1512px)};
+
+:root {
+    --header-h: #{rem(110px)};
+    --container_pdd: #{rem(50px)};
+    --link-h: #{rem(38px)};
+}
+
+@include media('tablet') {
+    :root {
+        --container_pdd: #{rem(20px)};
+    }
+}
+
+@include media('mobile') {
+    :root {
+        --container_pdd: #{rem(12px)};
+        --header-h: #{rem(78px)};
+        --link-h: #{rem(32px)};
+    }
+}

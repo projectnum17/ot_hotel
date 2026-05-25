@@ -1,0 +1,14 @@
+<section class="advantages">
+    <div class="container">
+        {{> _titleBuilder
+            tagWrapper = 'h2'
+            className = 'section-heading section-heading--mini'
+            label = 'Додаткові переваги'
+        }}
+        <div class="advantages__boxes">
+            {{#each advantages}}
+                {{> _advantagesBox this}}
+            {{/each}}
+        </div>
+    </div>
+</section>

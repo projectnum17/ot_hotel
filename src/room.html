@@ -1,0 +1,23 @@
+---
+layout: default
+pageName: Room
+pageDescription: Room
+headerCLass: header--simple
+---
+
+{{> _room}}
+{{> _equipment}}
+{{> _carousel
+    label = 'Номер в деталях'
+    thumbnails=(
+        array
+            (hash picture='./assets/images/c_1.jpg')
+            (hash picture='./assets/images/c_2.jpg')
+            (hash picture='./assets/images/c_3.jpg')
+            (hash picture='./assets/images/c_4.jpg')
+    )
+}}
+{{> _faq picture = './assets/images/faq_2.jpg'}}
+{{> _includes}}
+{{> _details}}
+{{> _preview}}

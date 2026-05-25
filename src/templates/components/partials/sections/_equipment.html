@@ -1,0 +1,45 @@
+<section class="equipment">
+    <div class="container">
+        {{> _titleBuilder
+        tagWrapper = 'h2'
+        label = 'Номер обладнано'
+        className = 'section-heading'
+        }}
+        <div class="equipment__info">
+            <div class="equipment__addit">
+                <button type="button" class="equipment__addit-head js-addit-service">
+                    Додаткові платні послуги
+                    <svg>
+                        <use xlink:href="./assets/images/icons/svg/sprite.svg#dropArrow"></use>
+                    </svg>
+                </button>
+                <div class="equipment__addit-details">
+                    <ul class="list-box">
+                        <li>
+                            Мінібар в номері
+                        </li>
+                        <li>
+                            Послуги пральні
+                        </li>
+                        <li>
+                            Послуга обслуговування номерів;
+                        </li>
+                        <li>
+                            Доплата за тваринку 500 грн
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <ul class="equipment__list">
+                {{#each equipment.equipment}}
+                <li>
+                    <svg>
+                        <use xlink:href="{{ icon }}"></use>
+                    </svg>
+                    {{ benefit }}
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</section>

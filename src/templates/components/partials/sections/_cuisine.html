@@ -1,0 +1,21 @@
+<section class="cuisine">
+    {{> _svgLine}}
+    <div class="container">
+        <div class="cuisine__info">
+            <div class="cuisine__txts">
+                <h2>
+                    Смак, що доповнює ваш відпочинок
+                </h2>
+                <p>
+                    Ми готуємо просто — але з увагою до кожної деталі. Сезонні продукти, локальні смаки і сніданки, які
+                    задають правильний ритм дня.
+                </p>
+            </div>
+            {{> _cuisineList}}
+            {{> _linkRoute label = 'Детальніше'}}
+        </div>
+        <div class="cuisine__pic">
+            <img loading="lazy" decoding="async" src="./assets/images/cuisine.jpg" alt="Picture">
+        </div>
+    </div>
+</section>

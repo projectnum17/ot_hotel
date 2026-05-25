@@ -1,0 +1,178 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.restoration {
+    padding-block: rem(55px) rem(47px);
+
+    @include media('mobile') {
+        padding-block: rem(28px);
+    }
+
+    .link-route {
+        margin-right: calc(var(--link-h) / 2);
+        @include media('mobile') {
+            align-self: flex-end;
+        }
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: rem(24px);
+        @include media('desktop') {
+            align-items: flex-start;
+        }
+        @include media('mobile') {
+            flex-direction: column;
+            gap: rem(12px);
+        }
+    }
+
+    &__info {
+        max-width: rem(594px);
+        @include media('mobile') {
+            max-width: 100%;
+        }
+    }
+
+    &__txts {
+        margin-bottom: rem(47px);
+
+        @include media('mobile') {
+            margin-bottom: rem(24px);
+        }
+
+        p {
+            font: 400 #{rem(18px)} / 100% $ff_base;
+
+            @include media('tablet') {
+                font-size: rem(16px);
+            }
+
+            @include media('mobile') {
+                font-size: rem(14px);
+            }
+        }
+
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0 0 rem(31px) 0;
+            font: 400 #{rem(70px)} / 103% $ff_accent;
+
+            @include media('desktop') {
+                font-size: rem(56px);
+            }
+
+            @include media('tablet') {
+                font-size: rem(42px);
+            }
+
+            @include media('mobile') {
+                font-size: rem(30px);
+                margin: 0 0 rem(12px) 0;
+            }
+        }
+
+        ul,
+        ol {
+            margin: 0 0 rem(24px) 0;
+            padding: 0;
+            list-style-type: none;
+            li {
+                padding-left: rem(22px);
+                position: relative;
+                font: 400 #{rem(18px)} / 150% $ff_base;
+                color: $c_content_half;
+                @include media('mobile') {
+                    font-size: rem(16px);
+                }
+                &::before {
+                    content: '';
+                    font: inherit;
+                    flex-shrink: 0;
+                    width: rem(14px);
+                    height: rem(1px);
+                    position: absolute;
+                    top: rem(14px);
+                    left: 0;
+                    background: $c_content_half;
+                    @include media('mobile') {
+                        top: rem(13px);
+                    }
+                }
+            }
+        }
+
+        *:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__prev {
+        aspect-ratio: 594 / 214;
+        margin-bottom: rem(46px);
+        @include media('mobile') {
+            margin: 0 0 rem(24px) 0;
+        }
+    }
+
+    &__pic {
+        aspect-ratio: 698 / 636;
+        max-width: rem(698px);
+        @include media('mobile') {
+            max-width: 100%;
+            aspect-ratio: 550 / 400;
+        }
+    }
+
+    &__foot {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: rem(12px);
+        @include media('mobile') {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__list {
+        max-width: rem(315px);
+        display: flex;
+        flex-direction: column;
+        li {
+            padding-left: rem(22px);
+            position: relative;
+            font: 400 #{rem(18px)} / 150% $ff_base;
+            color: $c_content_half;
+            @include media('mobile') {
+                font-size: rem(16px);
+            }
+            &::before {
+                content: '';
+                font: inherit;
+                flex-shrink: 0;
+                width: rem(14px);
+                height: rem(1px);
+                position: absolute;
+                top: rem(14px);
+                left: 0;
+                background: $c_content_half;
+                @include media('mobile') {
+                    top: rem(13px);
+                }
+            }
+        }
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

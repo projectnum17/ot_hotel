@@ -1,0 +1,57 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.blog {
+    padding-block: rem(121px);
+    overflow: hidden;
+
+    @include media('tablet') {
+        padding-block: rem(56px);
+    }
+    @include media('mobile') {
+        padding-block: rem(28px);
+    }
+
+    .container {
+        @include media('mobile') {
+            padding: 0;
+        }
+    }
+
+    .section-info {
+        max-width: rem(360px);
+        @include media('mobile') {
+            padding-inline: var(--container_pdd) 0;
+        }
+    }
+
+    .section-descr {
+        max-width: rem(227px);
+        @include media('mobile') {
+            max-width: 100%;
+            padding-inline: var(--container_pdd) 0;
+        }
+    }
+
+    &__head {
+        display: flex;
+        align-items: center;
+        gap: rem(12px);
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: rem(44px);
+        @include media('mobile') {
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: rem(24px);
+        }
+    }
+
+    .slider-nav,
+    .blog-slider {
+        @include media('mobile') {
+            padding-inline: var(--container_pdd);
+        }
+    }
+}

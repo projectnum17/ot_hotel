@@ -1,0 +1,16 @@
+{
+    "videosCollect": [
+        {
+            "source": "./assets/video/video_1.mp4",
+            "poster": "./assets/video/poster_1.png"
+        },
+        {
+            "source": "./assets/video/video_2.mp4",
+            "poster": "./assets/video/poster_2.png"
+        },
+        {
+            "source": "./assets/video/video_3.mp4",
+            "poster": "./assets/video/poster_3.png"
+        }
+    ]
+}

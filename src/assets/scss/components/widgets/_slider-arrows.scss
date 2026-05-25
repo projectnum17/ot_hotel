@@ -1,0 +1,74 @@
+@use '../../base/var' as *;
+@use '../../base/mixins' as *;
+@use '../../base/media' as *;
+
+.slider-arrows {
+    display: flex;
+    align-items: center;
+    gap: rem(40px);
+    @include media('mobile') {
+        justify-content: flex-end;
+        gap: rem(20px);
+    }
+
+    &__arrow {
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: rem(56px);
+        height: rem(56px);
+        border-radius: 50%;
+        background: #6f666133;
+        color: #6f6661;
+        @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        &.swiper-button-disabled {
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+        @include media('mobile') {
+            width: rem(40px);
+            height: rem(40px);
+        }
+
+        svg {
+            width: rem(48px);
+            height: rem(12px);
+            position: absolute;
+            top: 50%;
+            @include transitions(
+                0.3s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+
+            @include media('mobile') {
+                width: rem(32px);
+                height: rem(10px);
+            }
+        }
+
+        &:first-child {
+            @include hover {
+                svg {
+                    right: 70%;
+                }
+            }
+            svg {
+                right: 65%;
+                transform: translate(100%, -50%);
+            }
+        }
+
+        &:last-child {
+            @include hover {
+                svg {
+                    left: 70%;
+                }
+            }
+            svg {
+                left: 65%;
+                transform: translate(-100%, -50%) rotate(180deg);
+            }
+        }
+    }
+}

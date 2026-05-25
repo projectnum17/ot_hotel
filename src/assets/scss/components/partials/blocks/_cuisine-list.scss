@@ -1,0 +1,36 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.cuisine-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(26px) rem(83px);
+    @include media('mobile') {
+        gap: rem(12px);
+        width: 100%;
+    }
+    li {
+        font: 400 #{rem(18px)} / 100% $ff_base;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+        gap: rem(18px);
+        color: $c_content_half;
+        @include media('mobile') {
+            font-size: rem(14px);
+            align-items: center;
+            text-align: center;
+            gap: rem(6px);
+        }
+
+        svg {
+            width: rem(40px);
+            height: rem(40px);
+            @include media('mobile') {
+                width: rem(30px);
+                height: rem(30px);
+            }
+        }
+    }
+}

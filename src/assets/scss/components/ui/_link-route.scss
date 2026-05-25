@@ -1,0 +1,77 @@
+@use '../../base/var' as *;
+@use '../../base/mixins' as *;
+@use '../../base/media' as *;
+
+.link-route {
+    width: max-content;
+    display: inline-flex;
+    align-items: center;
+    text-transform: uppercase;
+    position: relative;
+    font: 400 #{rem(18px)} / 100% $ff_base;
+    min-height: var(--link-h);
+    gap: rem(10px);
+    @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+    @include hover {
+        svg {
+            transform: translateX(3px);
+        }
+
+        &::after {
+            width: rem(35px);
+            height: rem(35px);
+        }
+    }
+    @include media('mobile') {
+        font-size: rem(16px);
+        gap: rem(5px);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: var(--link-h);
+        height: var(--link-h);
+        border-radius: 50%;
+        border: 1px solid $c_content;
+        transform: translate(#{rem(17px)}, -50%);
+        @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include media('mobile') {
+            transform: translate(#{rem(14px)}, -50%);
+        }
+    }
+
+    svg {
+        width: rem(40px);
+        height: rem(6px);
+        @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include media('mobile') {
+            width: rem(32px);
+        }
+    }
+
+    &--reverse {
+        svg {
+            transform: rotate(90deg) translate(-40%, -13%);
+            @include media('mobile') {
+                transform: rotate(90deg) translate(-40%, 0);
+            }
+        }
+        &::after {
+            transform: translate(0, -50%);
+        }
+
+        @include hover {
+            &::after {
+                width: rem(38px);
+                height: rem(38px);
+            }
+
+            svg {
+                transform: rotate(90deg) translate(-30%, -13%);
+            }
+        }
+    }
+}

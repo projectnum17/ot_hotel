@@ -1,0 +1,64 @@
+{
+    "blog": [
+        {
+            "picture": "./assets/images/blog_1.jpg",
+            "title": "РАНОК БЕЗ ПОСПІХУ"
+        },
+        {
+            "picture": "./assets/images/blog_2.jpg",
+            "title": "3 ДНІ,  ЩО ПОВЕРТАЮТЬ ДО СЕБЕ"
+        },
+        {
+            "picture": "./assets/images/blog_3.jpg",
+            "title": "ВІДПОЧИНОК, ЯКИЙ ПРАЦЮЄ"
+        },
+        {
+            "picture": "./assets/images/blog_4.jpg",
+            "title": "ЧОМУ ТИША ВАЖЛИВА"
+        },
+        {
+            "picture": "./assets/images/blog_5.jpg",
+            "title": "ВІДПОЧИНОК, ЯКИЙ ПРАЦЮЄ"
+        },
+        {
+            "picture": "./assets/images/blog_1.jpg",
+            "title": "РАНОК БЕЗ ПОСПІХУ"
+        },
+        {
+            "picture": "./assets/images/blog_2.jpg",
+            "title": "3 ДНІ,  ЩО ПОВЕРТАЮТЬ ДО СЕБЕ"
+        },
+        {
+            "picture": "./assets/images/blog_3.jpg",
+            "title": "ВІДПОЧИНОК, ЯКИЙ ПРАЦЮЄ"
+        },
+        {
+            "picture": "./assets/images/blog_4.jpg",
+            "title": "ЧОМУ ТИША ВАЖЛИВА"
+        },
+        {
+            "picture": "./assets/images/blog_5.jpg",
+            "title": "ВІДПОЧИНОК, ЯКИЙ ПРАЦЮЄ"
+        },
+        {
+            "picture": "./assets/images/blog_1.jpg",
+            "title": "РАНОК БЕЗ ПОСПІХУ"
+        },
+        {
+            "picture": "./assets/images/blog_2.jpg",
+            "title": "3 ДНІ,  ЩО ПОВЕРТАЮТЬ ДО СЕБЕ"
+        },
+        {
+            "picture": "./assets/images/blog_3.jpg",
+            "title": "ВІДПОЧИНОК, ЯКИЙ ПРАЦЮЄ"
+        },
+        {
+            "picture": "./assets/images/blog_4.jpg",
+            "title": "ЧОМУ ТИША ВАЖЛИВА"
+        },
+        {
+            "picture": "./assets/images/blog_5.jpg",
+            "title": "ВІДПОЧИНОК, ЯКИЙ ПРАЦЮЄ"
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+<section class="space">
+    <div class="container">
+        {{> _titleBuilder
+            tagWrapper = 'h2'
+            label = 'Ваш простір для подій'
+            className = 'section-heading'
+        }}
+        <div class="space__info">
+            <div class="space__preview">
+                <img loading="lazy" decoding="async" src="./assets/images/space_1.png" alt="Picture">
+            </div>
+            <div class="space__details">
+                <div class="space__gallery">
+                    <img loading="lazy" decoding="async" src="./assets/images/space_2.png" alt="Picture">
+                    <img loading="lazy" decoding="async" src="./assets/images/space_3.png" alt="Picture">
+                </div>
+                {{> _sectionDescription
+                    text = 'Камерні весілля, retreat-заїзди, корпоративи та приватні святкування у просторі природи, тиші та приватності.'
+                }}
+                {{> _linkRoute label = 'Детальніше' }}
+                <div class="space__deco">
+                    <video muted autoplay loop playsinline class="js-video-autoplay" poster="">
+                        <source data-src="./assets/video/grass.mp4" type="video/mp4">
+                        <p>Your browser does not support the video tag.</p>
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

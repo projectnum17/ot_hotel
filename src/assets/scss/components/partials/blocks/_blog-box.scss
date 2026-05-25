@@ -1,0 +1,41 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.blog-box {
+    display: flex;
+    flex-direction: column;
+    max-width: rem(318px);
+    height: 100%;
+    background: #e0d6cd;
+    @include hover {
+        .blog-box__pic img {
+            transform: scale(1.15);
+        }
+    }
+
+    &__pic {
+        aspect-ratio: 318 / 183;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            @include transitions(
+                0.5s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+        }
+    }
+
+    &__title {
+        margin-top: auto;
+        padding: rem(30px) rem(35px);
+        font: 400 #{rem(30px)} / 100% $ff_base;
+        @include media('mobile') {
+            font-size: rem(22px);
+            padding: rem(18px) rem(12px);
+        }
+    }
+}

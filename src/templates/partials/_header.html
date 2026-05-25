@@ -1,0 +1,49 @@
+<header class="header js-header {{#if headerCLass}} {{headerCLass}}{{/if}}">
+    <div class="container">
+        <div class="header__row">
+            <button class="header__trigger js-menu-trigger">
+                <div class="header__trigger-deco">
+                    {{#count 2}}
+                    <span>
+                        <svg>
+                            <use xlink:href="./assets/images/icons/svg/sprite.svg#burgerArrow"></use>
+                        </svg>
+                    </span>
+                    {{/count}}
+                </div>
+                <span class="header__trigger-title">меню</span>
+            </button>
+        </div>
+        <a href="index.html" class="header__logo">
+            <img src="./assets/images/icons/logo_wht.svg" alt="Logotype">
+            <img src="./assets/images/icons/logo_drk.svg" alt="Logotype">
+        </a>
+        <div class="header__row">
+            <div class="header__controls">
+                <a href="javascript: void(0)" class="header__reserv glass-effect">Забронювати</a>
+                <ul class="header__lang js-lang-trigger">
+                    <li class="header__lang-current is-current">
+                        <span class="header__lang-label">UA</span>
+                        <svg>
+                            <use xlink:href="./assets/images/icons/svg/sprite.svg#ico-drop"></use>
+                        </svg>
+                    </li>
+                    <li class="header__lang-inner">
+                        <ul class="header__lang-list glass-effect">
+                            <li class="header__lang-item header__lang-item--active">
+                                <span class="header__lang-link">
+                                    UA
+                                </span>
+                            </li>
+                            <li class="header__lang-item">
+                                <a class="header__lang-link" href="#!">
+                                    EN
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>

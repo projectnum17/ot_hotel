@@ -1,0 +1,16 @@
+@use '../../base/var' as *;
+@use '../../base/mixins' as *;
+@use '../../base/media' as *;
+
+.tag {
+    font: 600 #{rem(18px)} / 100% $ff_accent;
+    text-transform: uppercase;
+    display: inline-flex;
+    border-radius: rem(35px);
+    border: 1px solid $c_border;
+    padding: rem(9px) rem(13px);
+    @include media('mobile') {
+        font-size: rem(14px);
+        padding: rem(5px) rem(20px);
+    }
+}

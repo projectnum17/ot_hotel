@@ -1,0 +1,15 @@
+<section class="faq">
+    <div class="container">
+        <div class="faq__preview">
+            {{> _titleBuilder
+                tagWrapper = 'h2'
+                label = 'Запитання та відповіді'
+                className = 'section-heading section-heading--mini'
+            }}
+            <div class="faq__pic">
+                <img loading="lazy" decoding="async" src="{{ picture }}" alt="Picture">
+            </div>
+        </div>
+        {{> _faqList}}
+    </div>
+</section>

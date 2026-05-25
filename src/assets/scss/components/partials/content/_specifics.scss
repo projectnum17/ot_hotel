@@ -1,0 +1,101 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.specifics {
+    padding-block: rem(60px);
+    @include media('mobile') {
+        padding-block: rem(28px);
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: rem(80px);
+        @include media('mobile') {
+            gap: rem(24px);
+        }
+    }
+
+    .section-heading {
+        max-width: rem(788px);
+        font-weight: 300;
+        @include media('mobile') {
+            max-width: 100%;
+        }
+    }
+
+    .section-descr {
+        max-width: rem(340px);
+        @include media('mobile') {
+            max-width: 100%;
+        }
+    }
+
+    &__info {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: rem(24px);
+        @include media('mobile') {
+            flex-direction: column;
+            gap: rem(12px);
+        }
+    }
+
+    &__pricelist {
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid #2b120a33;
+        border-bottom: 1px solid #2b120a33;
+        color: #191716;
+
+        li {
+            display: grid;
+            grid-template-columns: #{rem(326px)} #{rem(300px)} #{rem(340px)};
+            place-content: space-between;
+            gap: rem(24px);
+            padding-block: rem(54px);
+            &:not(:last-child) {
+                border-bottom: 1px solid #2b120a33;
+            }
+            @include media('desktop') {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @include media('mobile') {
+                padding-block: rem(24px);
+                gap: rem(12px);
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+    &__name,
+    &__target {
+        font: 400 #{rem(30px)} / 100% $ff_base;
+        @include media('mobile') {
+            font-size: rem(20px);
+        }
+    }
+
+    &__target {
+        @include media('desktop') {
+            grid-column: span 2;
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+
+    &__val {
+        font: 400 #{rem(50px)} / 100% $ff_base;
+        @include media('desktop') {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        @include media('mobile') {
+            font-size: rem(24px);
+        }
+    }
+}

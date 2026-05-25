@@ -1,0 +1,24 @@
+@use '../../base/var' as *;
+@use '../../base/mixins' as *;
+@use '../../base/media' as *;
+
+body {
+    &:has(.info .slider-progress) {
+        .slider-progress {
+            max-width: $container_wdth;
+            padding-inline: var(--container_pdd);
+            margin: 0 auto;
+        }
+    }
+}
+
+.slider-progress {
+    position: relative;
+    height: 1px !important;
+    background: #abaaa980;
+    .swiper-pagination-progressbar-fill {
+        height: 2px;
+        top: -50%;
+        background: #abaaa9;
+    }
+}

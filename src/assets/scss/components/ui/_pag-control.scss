@@ -1,0 +1,31 @@
+@use '../../base/var' as *;
+@use '../../base/mixins' as *;
+@use '../../base/media' as *;
+.pag-control {
+    width: rem(38px);
+    height: rem(38px);
+    border-radius: 50%;
+    position: relative;
+    border: 1px solid #191716;
+
+    &--l {
+        svg {
+            transform: translate(10%, -50%) rotate(180deg);
+        }
+    }
+
+    &--r {
+        svg {
+            transform: translate(-110%, -50%);
+        }
+    }
+
+    svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        aspect-ratio: 1;
+        width: rem(29px);
+    }
+}

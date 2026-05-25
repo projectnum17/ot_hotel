@@ -1,0 +1,22 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.addit {
+    padding-block: rem(60px);
+    @include media('mobile') {
+        padding-block: rem(28px);
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: rem(40px);
+        padding-top: rem(50px);
+        @include media('mobile') {
+            padding-top: rem(24px);
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            gap: rem(24px);
+        }
+    }
+}

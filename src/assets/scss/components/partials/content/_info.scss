@@ -1,0 +1,106 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.info {
+    overflow: hidden;
+
+    &:has(.carousel-box) {
+        .container {
+            margin-bottom: rem(62px);
+            @include media('tablet') {
+                margin-bottom: rem(42px);
+            }
+            @include media('mobile') {
+                margin-bottom: rem(24px);
+            }
+        }
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: rem(24px);
+
+        @include media('mobile') {
+            flex-direction: column;
+            gap: rem(6px);
+            align-items: flex-start;
+        }
+
+        &:not(:has(.section-descr)) {
+            justify-content: center;
+            .section-subtitle {
+                text-align: center;
+            }
+        }
+    }
+
+    .section-subtitle {
+        margin: 0;
+        text-align: left;
+    }
+
+    .section-descr {
+        max-width: rem(330px);
+    }
+
+    &__video {
+        max-width: rem(2560.98px);
+        margin: 0 auto;
+        padding-top: rem(52px);
+        width: 100%;
+        @include media('mobile') {
+            padding-top: rem(12px);
+        }
+        video {
+            width: 100%;
+            height: 100%;
+            aspect-ratio: 1512 / 540;
+            object-fit: cover;
+            @include media('mobile') {
+                aspect-ratio: 550 / 400;
+            }
+        }
+
+        &--blur {
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: #ebe3db4d;
+            }
+        }
+    }
+
+    &__pic {
+        max-width: rem(2560.98px);
+        margin: 0 auto;
+        padding-top: rem(52px);
+        width: 100%;
+
+        @include media('mobile') {
+            padding-top: rem(12px);
+            aspect-ratio: 550 / 400;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            aspect-ratio: 1512 / 540;
+            object-fit: cover;
+        }
+
+        &--blur {
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: #ebe3db4d;
+            }
+        }
+    }
+}

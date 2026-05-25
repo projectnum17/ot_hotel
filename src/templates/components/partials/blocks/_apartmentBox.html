@@ -1,0 +1,50 @@
+<a href="#!" class="apartment-box">
+    <div class="apartment-box__head">
+        <div class="apartment-box__preview">
+            <img loading="lazy" decoding="async" src="{{ preview }}" alt="{{ name }}">
+        </div>
+        <div class="apartment-box__details">
+            <ul class="apartment-box__descr">
+                <li>
+                    <svg>
+                        <use xlink:href="./assets/images/icons/svg/sprite.svg#icoUsers"></use>
+                    </svg>
+                    {{ quantity }} гостей
+                </li>
+                <li>
+                    <svg>
+                        <use xlink:href="./assets/images/icons/svg/sprite.svg#icoSquare"></use>
+                    </svg>
+                    {{ square }} м²
+                </li>
+                <li>
+                    <svg>
+                        <use xlink:href="./assets/images/icons/svg/sprite.svg#icoView"></use>
+                    </svg>
+                    {{ view }}
+                </li>
+            </ul>
+            <ul class="apartment-box__benefits">
+                {{#each benefits}}
+                <li>
+                    <div>
+                        <svg>
+                            <use xlink:href="{{ icon }}"></use>
+                        </svg>
+                    </div>
+                    <p>{{ benefit }}</p>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    <div class="apartment-box__foot">
+        <div class="apartment-box__info">
+            <p class="apartment-box__naming">{{ name }}</p>
+            <div class="apartment-box__size">
+                <span>{{ square }} м²</span>·<span>до {{ capacity }} гостей</span>
+            </div>
+        </div>
+        <p class="apartment-box__price">від {{ price }} грн / ніч</p>
+    </div>
+</a>

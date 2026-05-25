@@ -1,0 +1,164 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.legal {
+    padding-bottom: rem(68px);
+    @include media('tablet') {
+        padding-bottom: rem(56px);
+    }
+
+    @include media('mobile') {
+        padding-bottom: rem(28px);
+    }
+
+    &__content {
+        max-width: rem(900px);
+        margin: 0 auto;
+        font: 400 #{rem(22px)} / 100% $ff_base;
+        color: #191716;
+
+        @include media('desktop') {
+            font-size: rem(20px);
+        }
+
+        @include media('tablet') {
+            font-size: rem(18px);
+        }
+
+        @include media('mobile') {
+            font-size: rem(15px);
+        }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        text-align: center;
+        margin: 0 0 rem(20px) 0;
+    }
+
+    h1 {
+        font: 500 #{rem(80px)} / 100% $ff_accent;
+        @include media('desktop') {
+            @include media('desktop') {
+                font-size: rem(50px);
+            }
+
+            @include media('tablet') {
+                font-size: rem(36px);
+            }
+
+            @include media('mobile') {
+                font-size: rem(24px);
+            }
+        }
+    }
+
+    h2,
+    h3 {
+        font: 500 #{rem(60px)} / 100% $ff_accent;
+        @include media('desktop') {
+            font-size: rem(42px);
+        }
+
+        @include media('tablet') {
+            font-size: rem(30px);
+        }
+
+        @include media('mobile') {
+            font-size: rem(18px);
+        }
+    }
+
+    h4 {
+        font: 500 #{rem(48px)} / 100% $ff_accent;
+        @include media('desktop') {
+            font-size: rem(42px);
+        }
+
+        @include media('tablet') {
+            font-size: rem(30px);
+        }
+
+        @include media('mobile') {
+            font-size: rem(18px);
+        }
+    }
+
+    h5,
+    h6 {
+        font: 500 #{rem(36px)} / 100% $ff_accent;
+        @include media('desktop') {
+            font-size: rem(42px);
+        }
+
+        @include media('tablet') {
+            font-size: rem(30px);
+        }
+
+        @include media('mobile') {
+            font-size: rem(18px);
+        }
+    }
+
+    p {
+        &:has(+ ul),
+        &:has(+ ol) {
+            margin-bottom: 0;
+        }
+    }
+
+    ul,
+    ol {
+        list-style-type: none;
+        padding: 0;
+        margin: 0 0 rem(24px) 0;
+        li {
+            position: relative;
+        }
+    }
+
+    ol {
+        counter-reset: legal-counter;
+
+        li {
+            counter-increment: legal-counter;
+            padding-left: rem(22px);
+            &::before {
+                content: counter(legal-counter) '.';
+                position: absolute;
+                left: 0;
+                top: 0;
+                color: #191716;
+            }
+        }
+    }
+
+    ul {
+        li {
+            padding-left: rem(18px);
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: rem(12px);
+                height: rem(1px);
+                width: rem(10px);
+                background: #191716;
+            }
+        }
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
+    *:last-child {
+        margin-bottom: 0;
+    }
+}

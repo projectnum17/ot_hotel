@@ -1,0 +1,58 @@
+<section class="room pt-sm">
+    <div class="container">
+        <div class="room__name">
+            {{> _titleBuilder
+            tagWrapper = 'h1'
+            className = 'section-subtitle'
+            label = 'Стандарт'
+            }}
+            <div class="room__info">
+                <span class="room__price">4 500 грн / ніч</span>
+                {{> _linkRoute
+                label = 'Забронювати'
+                }}
+            </div>
+        </div>
+        <ul class="room__details">
+            <li>
+                <svg>
+                    <use xlink:href="./assets/images/icons/svg/sprite.svg#icoUsers"></use>
+                </svg>
+                2 гостей
+            </li>
+            <li>
+                <svg>
+                    <use xlink:href="./assets/images/icons/svg/sprite.svg#icoSquare"></use>
+                </svg>
+                22 м²
+            </li>
+            <li>
+                <svg>
+                    <use xlink:href="./assets/images/icons/svg/sprite.svg#icoClock"></use>
+                </svg>
+                Заїзд після 14:00
+            </li>
+            <li>
+                <svg>
+                    <use xlink:href="./assets/images/icons/svg/sprite.svg#icoClock"></use>
+                </svg>
+                Виїзд до 12:00
+            </li>
+            <li>
+                <svg>
+                    <use xlink:href="./assets/images/icons/svg/sprite.svg#icoView"></use>
+                </svg>
+                Вид на річку
+            </li>
+            <li>
+                <svg>
+                    <use xlink:href="./assets/images/icons/svg/sprite.svg#icoPet"></use>
+                </svg>
+                Ми раді Вашим улюбленцям
+            </li>
+        </ul>
+    </div>
+    <div class="room__preview">
+        <img src="./assets/images/room.jpg" alt="Picture">
+    </div>
+</section>

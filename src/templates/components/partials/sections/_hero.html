@@ -1,0 +1,40 @@
+<section class="hero">
+    {{> _introVideo}}
+    <div class="hero__content">
+        <div class="hero__preview">
+            <div class="container">
+                {{> _titleBuilder
+                    label = 'ТУТ ПОЧИНАЄТЬСЯ ВАШ ВІДПОЧИНОК'
+                    tagWrapper = 'h1'
+                    className = 'section-title'
+                }}
+                {{> _linkRoute
+                    label = 'Забронювати'
+                }}
+            </div>
+        </div>
+        <div class="hero__foot">
+            <div class="container">
+                <p class="hero__description">
+                    Ми були створені, щоб через любов до людей відкривати їм любов до життя
+                </p>
+                <ul class="hero__media">
+                    <li>
+                        <a href="https://www.facebook.com/" target="_blank" class="glass-effect">
+                            <svg>
+                                <use xlink:href="./assets/images/icons/svg/sprite.svg#facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/" target="_blank" class="glass-effect">
+                            <svg>
+                                <use xlink:href="./assets/images/icons/svg/sprite.svg#instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

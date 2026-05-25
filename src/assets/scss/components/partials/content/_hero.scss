@@ -1,0 +1,118 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.hero {
+    display: grid;
+    min-height: 100vh;
+    min-height: 100svh;
+    position: relative;
+    padding-block: var(--header-h) rem(27px);
+    color: $c_white;
+
+    @include media('mobile') {
+        padding-block: var(--header-h) rem(16px);
+    }
+
+    .section-title {
+        max-width: rem(1172px);
+    }
+
+    .link-route {
+        &::after {
+            border-color: $c_white;
+        }
+    }
+
+    &__preview,
+    &__foot {
+        position: relative;
+        z-index: 2;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: rem(10px);
+    }
+
+    &__preview {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: rem(40px);
+            align-items: center;
+            text-align: center;
+            @include media('mobile') {
+                gap: rem(24px);
+            }
+        }
+    }
+
+    &__foot {
+        margin-top: auto;
+        padding-top: rem(25px);
+        border-top: 1px solid #fbf7ee1a;
+        @include media('mobile') {
+            padding-top: rem(16px);
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: rem(24px);
+        }
+    }
+
+    &__description {
+        font: 400 #{rem(18px)} / 100% $ff_base;
+        max-width: rem(241px);
+        @include media('mobile') {
+            font-size: rem(16px);
+        }
+    }
+
+    &__media {
+        display: flex;
+        align-items: center;
+        gap: rem(6px);
+        @include media('mobile') {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        a {
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: rem(38px);
+            height: rem(38px);
+            @include transitions(
+                0.3s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+            @include hover {
+                transform: scale(1.05);
+            }
+
+            svg {
+                width: rem(17px);
+                height: rem(17px);
+                color: #fff;
+            }
+        }
+
+        img {
+            width: rem(17px);
+            height: rem(17px);
+        }
+    }
+}

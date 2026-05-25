@@ -1,0 +1,19 @@
+<section class="carousel">
+    <div class="container">
+        <div class="carousel__head">
+            {{> _titleBuilder
+                tagWrapper = 'h2'
+                className = 'section-heading section-heading--mini'
+                label = label
+            }}
+            {{#if description}}
+                {{> _sectionDescription
+                    text = text
+                }}
+            {{/if}}
+        </div>
+        {{> _carouselBox
+            pictures = thumbnails
+        }}
+    </div>
+</section>

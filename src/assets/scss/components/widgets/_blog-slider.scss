@@ -1,0 +1,11 @@
+@use '../../base/var' as *;
+@use '../../base/mixins' as *;
+@use '../../base/media' as *;
+
+.blog-slider {
+    overflow: visible;
+    &__slide {
+        width: auto;
+        height: auto;
+    }
+}

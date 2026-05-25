@@ -1,0 +1,66 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.pricelist {
+    padding-block: rem(50px);
+
+    @include media('mobile') {
+        padding-block: rem(28px);
+    }
+
+    &__points {
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid #2b120a33;
+        border-bottom: 1px solid #2b120a33;
+        color: #191716;
+
+        li {
+            display: grid;
+            grid-template-columns: #{rem(335px)} #{rem(250px)} #{rem(250px)};
+            place-content: space-between;
+            gap: rem(24px);
+            padding-block: rem(77px);
+            &:not(:last-child) {
+                border-bottom: 1px solid #2b120a33;
+            }
+            @include media('desktop') {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @include media('mobile') {
+                padding-block: rem(28px);
+                gap: rem(12px);
+            }
+        }
+    }
+
+    &__title {
+        font: 400 #{rem(50px)} / 100% $ff_base;
+        @include media('desktop') {
+            font-size: rem(36px);
+        }
+        @include media('mobile') {
+            font-size: rem(24px);
+        }
+    }
+
+    &__price {
+        grid-column: span 2;
+    }
+
+    &__price,
+    &__duration {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font: 400 #{rem(40px)} / 100% $ff_base;
+        @include media('desktop') {
+            justify-content: flex-end;
+        }
+        @include media('mobile') {
+            font-size: rem(18px);
+        }
+    }
+}

@@ -1,0 +1,58 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.posts {
+    padding-bottom: rem(59px);
+    @include media('mobile') {
+        padding-bottom: rem(28px);
+    }
+    .section-subtitle {
+        margin-bottom: 0;
+        text-align: left;
+    }
+
+    &__head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: rem(24px);
+        margin-bottom: rem(60px);
+        @include media('mobile') {
+            margin-bottom: rem(24px);
+            gap: rem(12px);
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__controls {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: rem(40px);
+    }
+
+    &__items {
+        margin-bottom: rem(45px);
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: rem(48px);
+        @include media('desktop-lg') {
+            gap: rem(12px);
+        }
+        @include media('desktop') {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            .blog-box {
+                max-width: 100%;
+            }
+        }
+        @include media('tablet') {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        @include media('mobile') {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+    }
+}
