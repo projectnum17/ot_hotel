@@ -69,6 +69,12 @@ const path = {
     clean: './' + distPath,
 };
 
+function spriteCopy() {
+    return src('src/assets/images/icons/svg/sprite.svg', { allowEmpty: true })
+        .pipe(dest(distPath + 'assets/images/icons/svg/'))
+        .pipe(browserSync.reload({ stream: true }));
+}
+
 // Обработка ошибок с динамическим заголовком
 function plumberNotify(title) {
     return plumber({
@@ -240,6 +246,7 @@ function watchFiles() {
     // В вотчерах используем опцию { allowEmpty: true } не нужно, но для надежности проверим пути
     watch([path.watch.html], html);
     watch([path.watch.css], css);
+    watch(['src/assets/images/icons/svg/sprite.svg'], spriteCopy);
     watch(['src/assets/js/**/*.js', '!src/assets/js/libs.js'], js);
     watch(['src/assets/js/libs.js'], libs);
     watch([path.watch.images], images);
@@ -251,7 +258,7 @@ function watchFiles() {
 // TASKS
 const build = series(
     clean,
-    parallel(html, css, js, libs, images, fonts, video, audio),
+    parallel(html, css, js, libs, spriteCopy, images, fonts, video, audio),
 );
 const dev = series(build, parallel(watchFiles, serve));
 
