@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="./assets/images/favicon/favicon.svg" type="image/svg">
+        <title>Villa Otte | Contacts</title>
+        <link rel="preload" href="./assets/fonts/ff_accent_300.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="./assets/fonts/ff_accent_500.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="./assets/fonts/ff_base_400.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="./assets/fonts/ff_secondary.woff2" as="font" type="font/woff2" crossorigin>
+        <meta name="description" content="Villa Otte | Contacts">
+        <link rel="stylesheet" href="./assets/css/libs.min.css">
+        <link rel="stylesheet" href="./assets/css/style.min.css">
+        <script defer src="./assets/js/libs.js"></script>
+        <script defer type="module" src="./assets/js/script.js"></script>
+    </head>
+
+    <body>
+        <div class="loader js-loader">
+            <div class="loader__ico">
+                <img src="./assets/images/icons/logo_drk.svg" alt="Logotype">
+            </div>
+        </div>
+        <header class="header js-header  header--simple">
+            <div class="container">
+                <div class="header__row">
+                    <button class="header__trigger js-menu-trigger">
+                        <div class="header__trigger-deco">
+                            <span>
+                                <svg>
+                                    <use xlink:href="./assets/images/icons/svg/sprite.svg#burgerArrow"></use>
+                                </svg>
+                            </span>
+                            <span>
+                                <svg>
+                                    <use xlink:href="./assets/images/icons/svg/sprite.svg#burgerArrow"></use>
+                                </svg>
+                            </span>
+                        </div>
+                        <span class="header__trigger-title">меню</span>
+                    </button>
+                </div>
+                <a href="index.html" class="header__logo">
+                    <img src="./assets/images/icons/logo_wht.svg" alt="Logotype">
+                    <img src="./assets/images/icons/logo_drk.svg" alt="Logotype">
+                </a>
+                <div class="header__row">
+                    <div class="header__controls">
+                        <a href="javascript: void(0)" class="header__reserv glass-effect">Забронювати</a>
+                        <ul class="header__lang js-lang-trigger">
+                            <li class="header__lang-current is-current">
+                                <span class="header__lang-label">UA</span>
+                                <svg>
+                                    <use xlink:href="./assets/images/icons/svg/sprite.svg#ico-drop"></use>
+                                </svg>
+                            </li>
+                            <li class="header__lang-inner">
+                                <ul class="header__lang-list glass-effect">
+                                    <li class="header__lang-item header__lang-item--active">
+                                        <span class="header__lang-link">
+                                            UA
+                                        </span>
+                                    </li>
+                                    <li class="header__lang-item">
+                                        <a class="header__lang-link" href="#!">
+                                            EN
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+
+            <section class="contacts pt-lg">
+                <div class="container">
+                    <div class="contacts__info">
+                        <h1 class="section-heading section-heading--mini">
+                            Контакти
+                        </h1>
+                        <div class="contacts__items">
+                            <div class="contacts__item">
+                                <p class="contacts__subtitle">Телефон</p>
+                                <ul class="contacts__list">
+                                    <li>
+                                        <a href="tel:+380671441441" class="contacts__connect">
+                                            тел. +380671441441
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="tel:+380993495081" class="contacts__connect">
+                                            тел. +380993495081
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="contacts__item">
+                                <p class="contacts__subtitle">Email</p>
+                                <ul class="contacts__list">
+                                    <li>
+                                        <a href="mailto:info@otte-hotel.com.ua" class="contacts__connect">
+                                            info@otte-hotel.com.ua
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="contacts__item">
+                                <p class="contacts__subtitle">ЛокаціЯ</p>
+                                <ul class="contacts__list">
+                                    <li>
+                                        <p class="contacts__connect">
+                                            Україна Полтавська обл. м. Миргород вул. Боровиковского, 2
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <ul class="contacts__socials">
+                            <li>
+                                <a href="https://www.facebook.com/" target="_blank">
+                                    <svg>
+                                        <use xlink:href="./assets/images/icons/svg/sprite.svg#facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/" target="_blank">
+                                    <svg>
+                                        <use xlink:href="./assets/images/icons/svg/sprite.svg#instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="contacts__flow">
+                        <h2 class="section-heading section-heading--mini">
+                            Уточніть наявність місць
+                        </h2>
+                        <div class="contact-box">
+                            <form>
+                                <div class="contact-box__fields">
+                                    <div class="contact-box__req">
+                                        <div class="contact-box__fieldset">
+                                            <label for="contactLastName" class="contact-box__label">Прізвище*</label>
+                                            <input required type="text" name="contactLastName" id="contactLastName" class="contact-box__field">
+                                        </div>
+                                        <div class="contact-box__fieldset">
+                                            <label for="contactFirstName" class="contact-box__label">Ім'я*</label>
+                                            <input required type="text" name="contactFirstName" id="contactFirstName" class="contact-box__field">
+                                        </div>
+                                        <div class="contact-box__fieldset">
+                                            <label for="contactPhone" class="contact-box__label">Телефон*</label>
+                                            <input required type="number" name="contactPhone" id="contactPhone" class="contact-box__field">
+                                        </div>
+                                        <div class="contact-box__fieldset">
+                                            <label for="contactEmail" class="contact-box__label">Email*</label>
+                                            <input required type="email" name="contactEmail" id="contactEmail" class="contact-box__field">
+                                        </div>
+                                    </div>
+                                    <div class="contact-box__guests">
+                                        <div class="col">
+                                            <div class="contact-box__fieldset">
+                                                <label for="contactAdultValue" class="contact-box__label">К-сть дорослих</label>
+                                                <input type="number" name="contactAdultValue" id="contactAdultValue" class="contact-box__field">
+                                            </div>
+                                            <div class="contact-box__fieldset">
+                                                <label for="contactAdultAge" class="contact-box__label">Вік</label>
+                                                <input type="number" name="contactAdultAge" id="contactAdultAge" class="contact-box__field">
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="contact-box__fieldset">
+                                                <label for="contactChildValue" class="contact-box__label">К-сть дітей</label>
+                                                <input type="number" name="contactChildValue" id="contactChildValue" class="contact-box__field">
+                                            </div>
+                                            <div class="contact-box__fieldset">
+                                                <label for="contactChildAge" class="contact-box__label">Вік</label>
+                                                <input type="number" name="contactChildAge" id="contactChildAge" class="contact-box__field">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="contact-box__dates">
+                                        <div class="contact-box__fieldset">
+                                            <label for="contactCheckIn" class="contact-box__label">Дата заїзду</label>
+                                            <div class="contact-box__wrapper">
+                                                <input readonly type="text" name="contactCheckIn" id="contactCheckIn" class="contact-box__field js-date-trigger js-date-checkIn">
+                                                <svg>
+                                                    <use xlink:href="./assets/images/icons/svg/sprite.svg#calendar"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="contact-box__fieldset">
+                                            <label for="contactCheckOut" class="contact-box__label">Дата заїзду</label>
+                                            <div class="contact-box__wrapper">
+                                                <input readonly type="text" name="contactCheckOut" id="contactCheckOut" class="contact-box__field js-date-trigger js-date-checkOut">
+                                                <svg>
+                                                    <use xlink:href="./assets/images/icons/svg/sprite.svg#calendar"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="contact-box__fieldset">
+                                        <label for="contactMessage" class="contact-box__label">Повідомлення</label>
+                                        <textarea class="contact-box__field contact-box__field--area" name="contactMessage" id="contactMessage"></textarea>
+                                    </div>
+                                </div>
+                                <button type="submit" class="link-route">
+                                    відправити
+                                    <svg>
+                                        <use xlink:href="./assets/images/icons/svg/sprite.svg#arrow-r"></use>
+                                    </svg>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="contacts__map">
+                    <img loading="lazy" decoding="async" src="./assets/images/geo.png" alt="Map">
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__info">
+                    <div class="footer__logo">
+                        <img loading="lazy" decoding="async" src="./assets/images/icons/logo_drk.svg" alt="Logotype">
+                    </div>
+                    <div class="footer__description">
+                        <p>
+                            Villa OTTE — камерний бутик-готель у Миргороді, створений для тиші, відновлення і турботи.
+                        </p>
+                    </div>
+                    <div class="footer__copy tablet--hidden">
+                        <p>
+                            © Усі права захищені Політика конфіденційності
+                        </p>
+                    </div>
+                </div>
+                <div class="footer__panel">
+                    <div class="footer__menu">
+                        <div class="footer__routes">
+                            <p class="footer__title">Сторінки</p>
+                            <ul>
+                                <li>
+                                    <a href="javascript: void(0)">ФІЛОСОФІЯ ГОТЕЛЮ</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">НОМЕРИ</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">ДОЗВІЛЛЯ</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">БРОНЮВАННЯ</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">ФОТОГАЛЕРЕЯ</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">3-D ЕКСКУРСІЯ</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">РЕСТОРАН</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">НОВИНИ</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">КОНТАКТИ</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__routes">
+                            <p class="footer__title">ДОЗВІЛЛЯ</p>
+                            <ul>
+                                <li>
+                                    <a href="javascript: void(0)">SPA простір</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">Курорт «Миргород»</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">Каное</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">Екскурсії</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">Кінотеатр</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">Для малечі</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">Вело</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">Спортивний майданчік</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">Теніс</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer__communicate">
+                        <div class="footer__connect">
+                            <p class="footer__title">Телефон</p>
+                            <a href="tel:+380671441441" class="footer__link">тел. +380671441441</a>
+                            <a href="tel:+380993495081" class="footer__link">тел. +380993495081</a>
+                        </div>
+                        <div class="footer__connect">
+                            <p class="footer__title">Email</p>
+                            <a href="mailto:info@otte-hotel.com.ua" class="footer__link">
+                                info@otte-hotel.com.ua
+                            </a>
+                        </div>
+                        <div class="footer__connect">
+                            <p class="footer__title">ЛокаціЯ</p>
+                            <p class="footer__link">
+                                Україна Полтавська обл. м. Миргород вул. Боровиковского, 2
+                            </p>
+                        </div>
+                        <ul class="footer__socials">
+                            <li>
+                                <a href="https://www.facebook.com/" target="_blank">
+                                    <svg>
+                                        <use xlink:href="./assets/images/icons/svg/sprite.svg#facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/" target="_blank">
+                                    <svg>
+                                        <use xlink:href="./assets/images/icons/svg/sprite.svg#instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__copy tablet--visible">
+                    <p>
+                        © Усі права захищені Політика конфіденційності
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <div class="aside-menu js-menu">
+            <div class="aside-menu__box">
+                <div class="container">
+                    <div class="aside-menu__content">
+                        <div class="aside-menu__routes">
+                            <div class="aside-menu__main">
+                                <ul>
+                                    <li>
+                                        <a href="javascript: void(0)">НОМЕРИ</a>
+                                        <ul>
+                                            <li>
+                                                <ul>
+                                                    <li>
+                                                        <a href="javascript: void(0)">
+                                                            СІМЕЙНИЙ НОМЕР
+                                                            <span></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript: void(0)">
+                                                            Стандарт
+                                                            <span></span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="javascript: void(0)">ДОЗВІЛЛЯ</a>
+                                        <ul>
+                                            <li>
+                                                <ul>
+                                                    <li>
+                                                        <a href="javascript: void(0)">
+                                                            SPA простір
+                                                            <span></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript: void(0)">
+                                                            Курорт «Миргород»
+                                                            <span></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript: void(0)">
+                                                            Каное
+                                                            <span></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript: void(0)">
+                                                            Екскурсії
+                                                            <span></span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="javascript: void(0)">БРОНЮВАННЯ</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript: void(0)">ОЗДОРОВЛЕННЯ</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript: void(0)">РЕСТОРАН</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript: void(0)">ІВЕНТИ</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="aside-menu__secondary">
+                                <ul>
+                                    <li>
+                                        <a href="javascript: void(0)">ФІЛОСОФІЯ ГОТЕЛЮ</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript: void(0)">ФОТОГАЛЕРЕЯ</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript: void(0)">3-D ЕКСКУРСІЯ</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript: void(0)">КОНТАКТИ</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript: void(0)">НОВИНИ</a>
+                                    </li>
+                                </ul>
+                                <div class="aside-menu__call">
+                                    <p class="aside-menu__title">Бронювання та консУльтація</p>
+                                    <a href="tel:+380671441441">(067) 144-14-41</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="aside-menu__address">
+                            <p class="aside-menu__title">де ми знаходимось?</p>
+                            <p class="aside-menu__target">
+                                Україна Полтавська обл. м. Миргород вул. Боровиковского, 2
+                            </p>
+                            <a href="javascript: void(0)" class="link-route">
+                                прокласти маршрут
+                                <svg>
+                                    <use xlink:href="./assets/images/icons/svg/sprite.svg#arrow-r"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="aside-menu__mob">
+                        <ul class="aside-menu__lang">
+                            <li>
+                                <a href="javascript: void(0)">ua</a>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0)">en</a>
+                            </li>
+                        </ul>
+                        <a href="javascript: void(0)" class="aside-menu__btn glass-effect">Забронювати</a>
+                    </div>
+                </div>
+            </div>
+            <div class="intro-video">
+                <video muted autoplay loop playsinline class="js-video-autoplay" poster="./assets/video/poster.png">
+                    <source data-src="./assets/video/hero.mp4" type="video/mp4">
+                    <p>Your browser does not support the video tag.</p>
+                </video>
+            </div>
+        </div>
+    </body>
+
+</html>
