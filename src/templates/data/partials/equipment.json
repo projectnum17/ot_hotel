@@ -2,51 +2,51 @@
     "equipment": [
         {
             "benefit": "Кондіціонер",
-            "icon": "./assets/images/icons/svg/sprite.svg#icoCond"
+            "icon": "./assets/images/icons/svg/sprite.svg#ico-cond"
         },
         {
             "benefit": "Двоспальне ліжко",
-            "icon": "./assets/images/icons/svg/sprite.svg#icoBed"
+            "icon": "./assets/images/icons/svg/sprite.svg#ico-bed"
         },
         {
             "benefit": "Душ",
-            "icon": "./assets/images/icons/svg/sprite.svg#icoShower"
+            "icon": "./assets/images/icons/svg/sprite.svg#ico-shower"
         },
         {
             "benefit": "Туалет",
-            "icon": "./assets/images/icons/svg/sprite.svg#icoTualet"
+            "icon": "./assets/images/icons/svg/sprite.svg#ico-tualet"
         },
         {
             "benefit": "Фен",
-            "icon": "./assets/images/icons/svg/sprite.svg#icoDryer"
+            "icon": "./assets/images/icons/svg/sprite.svg#ico-dryer"
         },
         {
             "benefit": "Москітна сітка",
-            "icon": "./assets/images/icons/svg/sprite.svg#icoMesh"
+            "icon": "./assets/images/icons/svg/sprite.svg#ico-mesh"
         },
         {
             "benefit": "Туалетно-косметичні засоби",
-            "icon": "./assets/images/icons/svg/sprite.svg#icoCosmetics"
+            "icon": "./assets/images/icons/svg/sprite.svg#ico-cosmetics"
         },
         {
             "benefit": "Телевізор",
-            "icon": "./assets/images/icons/svg/sprite.svg#icoTV"
+            "icon": "./assets/images/icons/svg/sprite.svg#ico-tv"
         },
         {
             "benefit": "Халат",
-            "icon": "./assets/images/icons/svg/sprite.svg#icoBathrobe"
+            "icon": "./assets/images/icons/svg/sprite.svg#ico-bathrobe"
         },
         {
             "benefit": "Рушники та капці",
-            "icon": "./assets/images/icons/svg/sprite.svg#icoTowel"
+            "icon": "./assets/images/icons/svg/sprite.svg#ico-towel"
         },
         {
             "benefit": "Сейф",
-            "icon": "./assets/images/icons/svg/sprite.svg#icoSafe"
+            "icon": "./assets/images/icons/svg/sprite.svg#ico-safe"
         },
         {
             "benefit": "Холодильник",
-            "icon": "./assets/images/icons/svg/sprite.svg#icoRefrigerator"
+            "icon": "./assets/images/icons/svg/sprite.svg#ico-refrigerator"
         }
     ]
 }
