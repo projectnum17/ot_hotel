@@ -50,7 +50,10 @@ const path = {
     src: {
         html: srcPath + '*.html',
         css: srcPath + 'assets/scss/*.scss',
-        images: srcPath + 'assets/images/**/*.+(png|jpg|gif|ico|svg|webp)',
+        images: [
+            srcPath + 'assets/images/**/*.+(png|jpg|gif|ico|svg|webp)',
+            '!' + srcPath + 'assets/images/icons/svg/sprite.svg', // Исключаем спрайт!
+        ],
         fonts: srcPath + 'assets/fonts/**/*.{ttf,otf,woff,woff2,eot,svg}',
         video: srcPath + 'assets/video/**/*.+(mp4|webm|avi|mov|png|jpg)',
         audio: srcPath + 'assets/audio/**/*.+(mp3)',
@@ -166,7 +169,10 @@ function libs() {
 
 // SCRIPTS (Копирование нативных модулей)
 function js() {
-    return src(['src/assets/js/**/*.js', '!src/assets/js/libs.js'], { base: 'src/', allowEmpty: true })
+    return src(['src/assets/js/**/*.js', '!src/assets/js/libs.js'], {
+        base: 'src/',
+        allowEmpty: true,
+    })
         .pipe(plumberNotify('JS Error'))
         .pipe(dest(distPath))
         .pipe(browserSync.reload({ stream: true }));
@@ -211,15 +217,17 @@ function audio() {
 
 // FONTS
 function fonts() {
-    return src(path.src.fonts, { allowEmpty: true })
-        .pipe(plumberNotify('Fonts Error'))
-        .pipe(newer(path.build.fonts))
-        .pipe(fonter({ formats: ['woff', 'ttf'] }))
-        // Для маски со шрифтами внутри таска тоже лучше добавить allowEmpty
-        .pipe(src(srcPath + 'assets/fonts/**/*.ttf', { allowEmpty: true }))
-        .pipe(ttf2woff2())
-        .pipe(dest(path.build.fonts))
-        .pipe(browserSync.reload({ stream: true }));
+    return (
+        src(path.src.fonts, { allowEmpty: true })
+            .pipe(plumberNotify('Fonts Error'))
+            .pipe(newer(path.build.fonts))
+            .pipe(fonter({ formats: ['woff', 'ttf'] }))
+            // Для маски со шрифтами внутри таска тоже лучше добавить allowEmpty
+            .pipe(src(srcPath + 'assets/fonts/**/*.ttf', { allowEmpty: true }))
+            .pipe(ttf2woff2())
+            .pipe(dest(path.build.fonts))
+            .pipe(browserSync.reload({ stream: true }))
+    );
 }
 
 // CLEAN
