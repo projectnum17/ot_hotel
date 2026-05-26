@@ -84,18 +84,13 @@
                 margin: 0 0 rem(50px) 0;
                 text-align: center;
 
-                @include media('desktop') {
-                    font-size: rem(42px);
-                }
-
                 @include media('tablet') {
-                    font-size: rem(36px);
-                    margin: 0 0 rem(24px) 0;
+                    font-size: rem(42px);
+                    margin: 0 0 rem(32px) 0;
                 }
-
                 @include media('mobile') {
-                    font-size: rem(25px);
-                    margin: 0 0 rem(12px) 0;
+                    font-size: rem(30px);
+                    margin: 0 0 rem(24px) 0;
                 }
             }
 

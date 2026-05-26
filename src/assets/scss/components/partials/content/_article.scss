@@ -70,27 +70,7 @@ body {
         top: calc(var(--header-h) + rem(20px));
         @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
         @include media('mobile') {
-            scroll-padding-inline: var(--container_pdd);
-            padding-inline: var(--container_pdd);
-            top: var(--header-h);
-            background: $bg_content;
-            padding-block: rem(10px);
-            flex-direction: row;
-            max-width: 100%;
-            overflow-x: auto;
-            overflow-y: hidden;
-            scrollbar-width: none;
-            -ms-overflow-style: none;
-            scroll-snap-type: x mandatory;
-            &::-webkit-scrollbar {
-                display: none;
-            }
-
-            li {
-                scroll-snap-align: start;
-                flex-shrink: 0;
-                max-width: rem(300px);
-            }
+            display: none;
         }
     }
 
@@ -267,6 +247,7 @@ body {
         gap: rem(24px);
         @include media('mobile') {
             gap: rem(12px);
+            padding-inline: var(--container_pdd);
             .pag-control {
                 display: none;
             }

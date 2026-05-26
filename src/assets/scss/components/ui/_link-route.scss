@@ -20,6 +20,10 @@
         &::after {
             width: rem(35px);
             height: rem(35px);
+            @include media('mobile') {
+                width: rem(28px);
+                height: rem(28px);
+            }
         }
     }
     @include media('mobile') {
@@ -67,10 +71,17 @@
             &::after {
                 width: rem(38px);
                 height: rem(38px);
+                @include media('mobile') {
+                    width: rem(32px);
+                    height: rem(32px);
+                }
             }
 
             svg {
                 transform: rotate(90deg) translate(-30%, -13%);
+                @include media('mobile') {
+                    transform: rotate(90deg) translate(-30%, 0%);
+                }
             }
         }
     }

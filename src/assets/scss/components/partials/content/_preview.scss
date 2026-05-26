@@ -9,7 +9,7 @@
     @include media('tablet') {
         padding-block: rem(56px);
         min-height: calc(100vh - var(--header-h));
-        min-height: calc(100svh - var(--header-h));
+        min-height: calc(100dvh - var(--header-h));
     }
     @include media('mobile') {
         padding-block: rem(28px);

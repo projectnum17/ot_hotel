@@ -64,18 +64,17 @@
         h4,
         h5,
         h6 {
-            font: 400 #{rem(80px)} / 90% $ff_accent;
+            font: 400 #{rem(70px)} / 90% $ff_accent;
             margin: 0 0 rem(32px) 0;
             @include media('desktop') {
-                font-size: rem(50px);
+                font-size: rem(56px);
             }
-
             @include media('tablet') {
-                font-size: rem(36px);
+                font-size: rem(42px);
+                margin: 0 0 rem(32px) 0;
             }
-
             @include media('mobile') {
-                font-size: rem(24px);
+                font-size: rem(30px);
                 margin: 0 0 rem(24px) 0;
             }
         }

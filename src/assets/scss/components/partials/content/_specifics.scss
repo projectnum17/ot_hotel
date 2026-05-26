@@ -79,9 +79,16 @@
         }
     }
 
+    &__name {
+        @include media('desktop') {
+            grid-row: span 2;
+            display: flex;
+            align-items: center;
+        }
+    }
+
     &__target {
         @include media('desktop') {
-            grid-column: span 2;
             display: flex;
             justify-content: flex-end;
         }

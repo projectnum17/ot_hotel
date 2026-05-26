@@ -242,6 +242,10 @@ body {
         gap: rem(12px);
         @include media('mobile') {
             flex-wrap: wrap;
+            flex-direction: row-reverse;
+            .link-route {
+                margin-right: calc(var(--link-h) / 2);
+            }
         }
     }
 

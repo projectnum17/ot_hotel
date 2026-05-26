@@ -32,5 +32,8 @@
 
     .section-heading {
         max-width: 50%;
+        @include media('mobile') {
+            max-width: 100%;
+        }
     }
 }

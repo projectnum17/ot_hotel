@@ -20,15 +20,52 @@
         max-width: rem(452px);
         flex-direction: column;
         gap: rem(16px);
+        @include hover {
+            .procedures-slider__pic img {
+                transform: scale(1.15);
+            }
+            .procedures-slider__info{
+                transform: translateY(0);
+            }
+        }
         @include media('mobile') {
             max-width: rem(320px);
             gap: rem(12px);
         }
     }
 
+    &__details {
+        font: 400 #{rem(24px)} / 100% $ff_base;
+    }
+
+    &__info {
+        pointer-events: none;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: rem(29px);
+        justify-content: flex-end;
+        inset: 0;
+        padding: rem(30px);
+        transform: translateY(100%);
+        color: #ebe3db;
+        background: #00000080;
+        backdrop-filter: blur(14px);
+        @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+
+        .link-route {
+            color: #ebe3db;
+
+            &::after {
+                border-color: #ebe3db;
+            }
+        }
+    }
+
     &__pic {
         aspect-ratio: 452 / 540;
         overflow: hidden;
+        position: relative;
 
         @include media('mobile') {
             aspect-ratio: 251 / 300;
@@ -37,6 +74,10 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            @include transitions(
+                0.5s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
             @include media('mobile') {
                 aspect-ratio: 251 / 300;
             }

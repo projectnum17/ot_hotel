@@ -70,12 +70,15 @@
             margin: 0 0 rem(40px) 0;
             font: 400 #{rem(70px)} / 84% $ff_accent;
             color: #2b120a;
+            @include media('desktop') {
+                font-size: rem(56px);
+            }
             @include media('tablet') {
                 font-size: rem(42px);
                 margin: 0 0 rem(32px) 0;
             }
             @include media('mobile') {
-                font-size: rem(24px);
+                font-size: rem(30px);
                 margin: 0 0 rem(24px) 0;
             }
         }

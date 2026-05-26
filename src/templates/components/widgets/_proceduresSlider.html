@@ -3,12 +3,23 @@
         <div class="procedures-slider__wrapper swiper-wrapper">
             {{#each slides}}
             <div class="procedures-slider__slide swiper-slide">
-                <div class="procedures-slider__box">
+                <a href="#!" class="procedures-slider__box">
                     <div class="procedures-slider__pic">
                         <img loading="lazy" decoding="async" src="{{ picture }}" alt="Picture">
+                        <div class="procedures-slider__info">
+                            <p class="procedures-slider__details">
+                                {{ descr }}
+                            </p>
+                            <div class="link-route">
+                                Забронювати
+                                <svg>
+                                    <use href="./assets/images/icons/svg/sprite.svg#arrow-r"></use>
+                                </svg>
+                            </div>
+                        </div>
                     </div>
                     <p class="procedures-slider__title">{{ title }}</p>
-                </div>
+                </a>
             </div>
             {{/each}}
         </div>

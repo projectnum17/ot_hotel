@@ -13,13 +13,6 @@
         padding-block: rem(28px);
     }
 
-    .link-route {
-        @include media('mobile') {
-            align-self: flex-end;
-            margin-right: calc(var(--link-h) / 2);
-        }
-    }
-
     .container {
         display: flex;
         align-items: center;

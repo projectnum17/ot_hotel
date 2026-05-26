@@ -10,17 +10,8 @@
 
     .section-heading {
         margin-bottom: rem(60px);
-        @include media('tablet') {
-            padding-inline: var(--container_pdd);
-        }
         @include media('mobile') {
             margin-bottom: rem(24px);
-        }
-    }
-
-    .container {
-        @include media('tablet') {
-            padding: 0;
         }
     }
 
@@ -49,7 +40,6 @@
         }
         @include media('mobile') {
             padding-block: rem(20px);
-            padding-inline: var(--container_pdd);
         }
 
         &:has(.equipment__addit-head.is-active) {
@@ -117,14 +107,7 @@
 
         @include media('tablet') {
             max-width: 100%;
-            display: flex;
-            overflow: auto;
-            scrollbar-width: none;
-            -ms-overflow-style: none;
-            &::-webkit-scrollbar {
-                display: none;
-            }
-            padding-inline: var(--container_pdd);
+            width: 100%;
         }
 
         @include media('mobile') {

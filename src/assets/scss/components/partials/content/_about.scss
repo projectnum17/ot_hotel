@@ -18,14 +18,18 @@
     }
 
     .svg-line {
-        top: 50%;
-        transform: translate(-20%, -40%);
+        left: 0;
+        top: 0;
+        transform: translateX(-50%);
         bottom: rem(44px);
         @include media('mobile') {
-            transform: translate(-200%, -40%);
+            transform: translate(0);
         }
         svg {
             height: 100%;
+            @include media('mobile') {
+                transform: translateX(-38%);
+            }
         }
     }
 

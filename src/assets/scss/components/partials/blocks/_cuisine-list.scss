@@ -19,8 +19,6 @@
         color: $c_content_half;
         @include media('mobile') {
             font-size: rem(14px);
-            align-items: center;
-            text-align: center;
             gap: rem(6px);
         }
 
